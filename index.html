@@ -613,19 +613,11 @@ var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=t
             var progress = (scrollY - transitionStart) / transitionLength;
             var eased = progress * progress * (3 - 2 * progress);
             var r,g,b;
-            if(eased < 0.5){
-                // black → blue (first half)
-                var t = eased * 2;
-                r = Math.round(10 + t * 30);
-                g = Math.round(10 + t * 87);
-                b = Math.round(10 + t * 218);
-            } else {
-                // blue → white (second half)
-                var t = (eased - 0.5) * 2;
-                r = Math.round(40 + t * 215);
-                g = Math.round(97 + t * 158);
-                b = Math.round(228 + t * 27);
-            }
+            // Subtle blue tint peaking at 15% through, then fading to white
+            var bluePeak = Math.sin(eased * Math.PI) * 0.15;
+            r = Math.round(10 + eased * 245 - bluePeak * 50);
+            g = Math.round(10 + eased * 245 + bluePeak * 40);
+            b = Math.round(10 + eased * 245 + bluePeak * 120);
             body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
         }
     }
