@@ -89,17 +89,25 @@
         }
 
         .hero-img-wrap {
-            position:relative; max-width:1000px; height:650px;
-            margin:0 auto -30px; z-index:1;
+            position:relative; max-width:1000px; height:600px;
+            margin:0 auto; z-index:1;
         }
         .hero-img-wrap img.hero-photo {
             width:100%; height:100%;
             object-fit:contain; object-position:center bottom;
         }
-        .hero-logo {
-            position:absolute; top:58%; left:50%; transform:translate(-50%,-50%);
-            width:220px; z-index:3;
-            filter:drop-shadow(0 0 15px rgba(0,0,0,0.8)) drop-shadow(0 0 5px rgba(0,0,0,0.9));
+        .hero-logo-below {
+            display:block; width:180px; margin:-20px auto 20px;
+            position:relative; z-index:2;
+            filter:drop-shadow(0 2px 8px rgba(0,0,0,0.5));
+        }
+
+        /* ── Section boxes (Ali Khan pattern) ── */
+        .box {
+            background:var(--bg2); border:1px solid rgba(var(--ar),0.15);
+            border-radius:16px; padding:40px 28px;
+            max-width:860px; margin:0 auto;
+            box-shadow:0 0 30px rgba(0,0,0,0.3);
         }
 
         .badge {
@@ -251,8 +259,9 @@
             .s-row .s-text { padding:24px 20px; }
             .hero h1 { font-size:26px; }
             .hero-sub { font-size:14px; }
-            .hero-img-wrap { height:500px; max-width:100%; }
-            .hero-logo { width:170px; }
+            .hero-img-wrap { height:460px; max-width:100%; }
+            .hero-logo-below { width:140px; }
+            .box { padding:28px 16px; }
             .hero-icons { flex-direction:column; gap:12px; align-items:center; }
             .sec { padding:50px 0; }
             .cta { padding:14px 28px; font-size:14px; }
@@ -261,8 +270,8 @@
         }
         @media(max-width:480px) {
             .hero h1 { font-size:22px; }
-            .hero-img-wrap { height:400px; }
-            .hero-logo { width:140px; }
+            .hero-img-wrap { height:340px; }
+            .hero-logo-below { width:120px; }
             .badge { font-size:9px; padding:6px 14px; }
             .sh { font-size:22px; }
             .cta { padding:13px 22px; font-size:13px; }
@@ -280,8 +289,8 @@
         <!-- Photo -->
         <div class="hero-img-wrap">
             <img class="hero-photo" src="/images/abu-hero.png" alt="Abu Lahya" loading="eager">
-            <img class="hero-logo" src="/images/ima-logo.png" alt="IMA Accelerator" loading="eager">
         </div>
+        <img class="hero-logo-below" src="/images/ima-logo.png" alt="IMA Accelerator" loading="eager">
 
         <!-- Badge -->
         <div class="badge">
@@ -319,16 +328,17 @@
     <div class="w">
         <div class="gd" style="margin-bottom:50px;"></div>
 
-        <div class="auth-stat">
-            <div class="snum"><span class="g">$10M+</span> In Combined Student Revenue</div>
-            <div class="sbody">1,500+ Muslims taught. 94% success rate. From a waiter in France making &euro;11/hour to building a team of 50+ across 7 countries. Osamah made hijrah to Morocco. Farhad retired his mother. Tanny hit 7 figures. The system works. The numbers prove it.</div>
+        <div class="box">
+            <div class="auth-stat">
+                <div class="snum"><span class="g">$10M+</span> In Combined Student Revenue</div>
+                <div class="sbody">1,500+ Muslims taught. 94% success rate. From a waiter in France making &euro;11/hour to building a team of 50+ across 7 countries. Osamah made hijrah to Morocco. Farhad retired his mother. Tanny hit 7 figures. The system works. The numbers prove it.</div>
+            </div>
+            <div class="cw"><a href="#apply" class="cta">Save My Spot</a></div>
         </div>
 
-        <div class="cw"><a href="#apply" class="cta">Save My Spot</a></div>
-
         <!-- What / When / Where -->
-        <div style="margin-top:50px;">
-            <h2 class="sh">All the Details</h2>
+        <div class="box" style="margin-top:40px;">
+            <h2 class="sh" style="margin-bottom:28px;">All the Details</h2>
             <div class="detail-grid">
                 <div class="detail-card sr">
                     <div class="d-icon">
@@ -363,6 +373,7 @@
 <section class="sec sr" style="padding-top:0;">
     <div class="w">
         <div class="gd" style="margin-bottom:50px;"></div>
+        <div class="box">
         <h2 class="sh">Everything You'll Learn</h2>
         <p class="ss">90 minutes. One skill. The full breakdown of how Muslims are building halal income online without trading, ecom, or showing their face.</p>
 
@@ -398,6 +409,7 @@
 
         <p style="text-align:center;font-size:15px;color:var(--t);font-weight:600;margin:28px 0 0;">You'll walk away knowing exactly which skill matches your personality and the steps to land your first paying client in <span class="g">30-60 days</span>.</p>
         <div class="cw"><a href="#apply" class="cta">Save My Free Spot</a></div>
+        </div>
     </div>
 </section>
 
@@ -407,6 +419,7 @@
 <section class="sec sr" style="padding-top:0;">
     <div class="w">
         <div class="gd" style="margin-bottom:50px;"></div>
+        <div class="box">
         <h2 class="sh">Is This Training Right <span class="gi">For You?</span></h2>
         <p class="ss">This training was built for a specific type of person. If any of the below sounds like you, this seat is yours.</p>
 
@@ -446,6 +459,7 @@
                 <li>You expect results without sending a single email</li>
                 <li>You're already making $10K+/month online consistently</li>
             </ul>
+        </div>
         </div>
     </div>
 </section>
