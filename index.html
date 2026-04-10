@@ -217,6 +217,21 @@
 <!-- urgency bar removed -->
 
 <!-- ============================
+     STICKY TOP BAR
+     ============================ -->
+<div style="background:#111;border-bottom:1px solid rgba(40,97,228,0.2);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:9999;gap:16px;flex-wrap:wrap;">
+    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
+        <img src="/images/ima-logo.png" alt="IMA" style="height:28px;width:auto;">
+        <span style="font-size:11px;font-weight:600;color:var(--text2);letter-spacing:1px;text-transform:uppercase;">Free Live Event</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;">
+        <span style="color:var(--text2);font-weight:600;font-size:11px;text-transform:uppercase;">Starts in:</span>
+        <span id="top-cd" style="font-variant-numeric:tabular-nums;">--D : --H : --M : --S</span>
+    </div>
+    <a href="#apply" style="background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;flex-shrink:0;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(40,97,228,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
+</div>
+
+<!-- ============================
      S1: HERO
      ============================ -->
 <section class="hero">
@@ -561,6 +576,21 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()
 <!-- Tally Form Loader -->
 <script>
 var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
+</script>
+
+<!-- Top bar countdown: April 26, 2026 6PM EST = 23:00 UTC -->
+<script>
+(function(){
+    var t=new Date('2026-04-26T23:00:00Z').getTime();
+    var el=document.getElementById('top-cd');
+    if(!el)return;
+    function u(){
+        var d=t-Date.now();if(d<0)d=0;
+        var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);
+        el.textContent=(dd<10?'0'+dd:dd)+'D : '+(hh<10?'0'+hh:hh)+'H : '+(mm<10?'0'+mm:mm)+'M : '+(ss<10?'0'+ss:ss)+'S';
+    }
+    u();setInterval(u,1000);
+})();
 </script>
 
 <!-- Scroll-based background transition: black → white starting at bonus section -->
