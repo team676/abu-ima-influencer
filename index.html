@@ -6,7 +6,7 @@
     <title>{{PAGE_TITLE}}</title>
     <meta name="description" content="{{META_DESCRIPTION}}">
     <meta name="theme-color" content="#0a0a0a">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='10' fill='%23D4AF37'%3E{{FAVICON_TEXT}}%3C/text%3E%3C/svg%3E">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='10' fill='%232861E4'%3E{{FAVICON_TEXT}}%3C/text%3E%3C/svg%3E">
     <!-- TRACKING: Replace with client's tracking pixel -->
     <!-- <link rel="dns-prefetch" href="https://YOUR-TRACKING-DOMAIN"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     <style>
 
         :root {
-            --accent: #D4AF37;
-            --accent-rgb: 212, 175, 55;
+            --accent: #2861E4;
+            --accent-rgb: 40, 97, 228;
             --bg: #0a0a0a;
             --bg2: #111;
             --text: #fff;
@@ -26,8 +26,8 @@
             --text4: #555;
             --border: #222;
             --red: #EF4444;
-            --gold:#D4AF37;
-            --gold-rgb:212,175,55;
+            --gold:#2861E4;
+            --gold-rgb:40,97,228;
         }
         * { margin:0; padding:0; box-sizing:border-box; }
         html { scroll-behavior:smooth; }
@@ -41,16 +41,16 @@
         .g { color:var(--accent); }
         .gi { color:var(--accent); font-style:italic; text-shadow:0 0 20px rgba(var(--accent-rgb),0.5); }
         .grad-text { background:linear-gradient(90deg,#666 0%,#999 15%,#fff 45%,#fff 55%,#999 85%,#666 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
-        .grad-gold { background:linear-gradient(90deg,#8B6914 0%,#C49B2F 15%,#E8C84A 45%,#E8C84A 55%,#C49B2F 85%,#8B6914 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+        .grad-gold { background:linear-gradient(90deg,#1a3fa0 0%,#2861E4 25%,#4A8BFF 50%,#2861E4 75%,#1a3fa0 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
         .strike { text-decoration:line-through; color:var(--text3); }
         .accent-bar { height:2px; background:linear-gradient(90deg,transparent 5%,rgba(var(--gold-rgb),0.5) 30%,rgba(var(--gold-rgb),0.7) 50%,rgba(var(--gold-rgb),0.5) 70%,transparent 95%); max-width:800px; margin:0 auto; }
 
         /* ── CTA Button (Gold filled, dark border, shimmer) ── */
         .cta {
             display:inline-flex; align-items:center; justify-content:center;
-            background:linear-gradient(180deg, #E8C84A 0%, #D4AF37 50%, #C49B2F 100%); color:#000; font-weight:700; font-size:16px;
+            background:linear-gradient(180deg, #4A8BFF 0%, #2861E4 50%, #1E4FBF 100%); color:#fff; font-weight:700; font-size:16px;
             padding:18px 36px; border-radius:14px; text-decoration:none;
-            border:2px solid #8B6914;
+            border:2px solid #1a3fa0;
             cursor:pointer; font-family:inherit;
             box-shadow:0 4px 30px rgba(0,0,0,0.3), 0 0 12px rgba(var(--gold-rgb),0.1);
             transition:transform 0.4s ease, box-shadow 0.4s ease;
@@ -110,8 +110,8 @@
 
         /* ── Bonus Card (with corner accents + ribbon bg) ── */
         .bonus-card { background:#0a0a0a; border:none; border-radius:16px; padding:36px 28px; max-width:700px; margin:0 auto; text-align:center; box-shadow:0 4px 30px rgba(0,0,0,0.4); position:relative; overflow:hidden; }
-        .bonus-card::before { content:''; position:absolute; top:-1px; right:-1px; width:80px; height:80px; border-top:3px solid #D4AF37; border-right:3px solid #D4AF37; border-radius:0 16px 0 0; pointer-events:none; }
-        .bonus-card::after { content:''; position:absolute; bottom:-1px; left:-1px; width:80px; height:80px; border-bottom:3px solid #D4AF37; border-left:3px solid #D4AF37; border-radius:0 0 0 16px; pointer-events:none; }
+        .bonus-card::before { content:''; position:absolute; top:-1px; right:-1px; width:80px; height:80px; border-top:3px solid #2861E4; border-right:3px solid #2861E4; border-radius:0 16px 0 0; pointer-events:none; }
+        .bonus-card::after { content:''; position:absolute; bottom:-1px; left:-1px; width:80px; height:80px; border-bottom:3px solid #2861E4; border-left:3px solid #2861E4; border-radius:0 0 0 16px; pointer-events:none; }
         .ribbon-bg { position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none; background:
             linear-gradient(145deg, transparent 20%, rgba(140,110,30,0.08) 30%, rgba(180,140,40,0.12) 33%, rgba(140,110,30,0.06) 36%, transparent 45%),
             linear-gradient(150deg, transparent 35%, rgba(140,110,30,0.06) 42%, rgba(180,140,40,0.1) 45%, rgba(140,110,30,0.05) 48%, transparent 58%),
