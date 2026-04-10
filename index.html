@@ -571,16 +571,17 @@ var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=t
     var body = document.body;
     function onScroll(){
         var bonusTop = bonus.getBoundingClientRect().top + window.scrollY;
-        var transitionStart = bonusTop - window.innerHeight;
-        var transitionEnd = document.body.scrollHeight - window.innerHeight;
+        var transitionStart = bonusTop - window.innerHeight * 0.5;
+        var transitionLength = window.innerHeight * 0.8;
         var scrollY = window.scrollY;
         if(scrollY <= transitionStart){
             body.style.backgroundColor = '#0a0a0a';
-        } else if(scrollY >= transitionEnd){
+        } else if(scrollY >= transitionStart + transitionLength){
             body.style.backgroundColor = '#ffffff';
         } else {
-            var progress = (scrollY - transitionStart) / (transitionEnd - transitionStart);
-            var v = Math.round(progress * 255);
+            var progress = (scrollY - transitionStart) / transitionLength;
+            var eased = progress * progress * (3 - 2 * progress);
+            var v = Math.round(eased * 255);
             body.style.backgroundColor = 'rgb('+v+','+v+','+v+')';
         }
     }
