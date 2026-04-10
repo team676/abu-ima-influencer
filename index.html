@@ -612,8 +612,21 @@ var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=t
         } else {
             var progress = (scrollY - transitionStart) / transitionLength;
             var eased = progress * progress * (3 - 2 * progress);
-            var v = Math.round(eased * 255);
-            body.style.backgroundColor = 'rgb('+v+','+v+','+v+')';
+            var r,g,b;
+            if(eased < 0.5){
+                // black → blue (first half)
+                var t = eased * 2;
+                r = Math.round(10 + t * 30);
+                g = Math.round(10 + t * 87);
+                b = Math.round(10 + t * 218);
+            } else {
+                // blue → white (second half)
+                var t = (eased - 0.5) * 2;
+                r = Math.round(40 + t * 215);
+                g = Math.round(97 + t * 158);
+                b = Math.round(228 + t * 27);
+            }
+            body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
         }
     }
     window.addEventListener('scroll', onScroll, {passive:true});
