@@ -236,7 +236,7 @@
         <span id="top-cd" style="font-variant-numeric:tabular-nums;">--D : --H : --M : --S</span>
     </div>
     <div style="display:flex;justify-content:flex-end;">
-        <a href="#apply" style="background:var(--accent);color:var(--text);font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(40,97,228,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
+        <a href="#apply" style="background:var(--accent);color:#FFFFFF;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:transform 0.3s,box-shadow 0.3s;" onclick="openModal(event)" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(40,97,228,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
     </div>
 </div>
 <style>@keyframes livedot{0%,100%{opacity:1;box-shadow:0 0 8px #EF4444;}50%{opacity:0.4;box-shadow:0 0 4px #EF4444;}}</style>
@@ -332,29 +332,7 @@
     </div>
 </section>
 
-<!-- ============================
-     S3: WHO IS THIS FOR (Checkmark Grid)
-     ============================ -->
-<section style="padding:60px 24px;">
-    <div class="container">
-        <div class="wa-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
-            <div class="gold-line"></div>
-            <div class="gold-dots"></div>
-            <h2 class="grad-text" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;">{{WHO_HEADLINE}}</h2>
-            <div class="wa-grid sr-stagger">
-                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>{{WHO_ITEM_1}}</p></div>
-                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>{{WHO_ITEM_2}}</p></div>
-                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>{{WHO_ITEM_3}}</p></div>
-                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>{{WHO_ITEM_4}}</p></div>
-                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>{{WHO_ITEM_5}}</p></div>
-                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>{{WHO_ITEM_6}}</p></div>
-            </div>
-            <div style="text-align:center;margin-top:20px;"><a href="#apply" class="cta" onclick="openModal(event)">{{CTA_TEXT}}</a></div>
-        </div>
-    </div>
-</section>
-
-<div class="accent-bar sr"></div>
+<!-- WHO IS THIS FOR: removed -->
 
 <!-- ============================
      S4: BEFORE/AFTER
@@ -392,98 +370,7 @@
     </div>
 </section>
 
-<div class="accent-bar sr"></div>
-
-<!-- ============================
-     S5: TIMELINE/OVERVIEW
-     ============================ -->
-<section class="schedule">
-    <div class="container">
-        <div class="schedule-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
-            <div class="gold-line"></div>
-            <div class="gold-dots"></div>
-            <h2 class="grad-text" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;">{{TIMELINE_HEADLINE}}</h2>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto;">
-                <div style="background:#FFFFFF;border:1px solid rgba(var(--gold-rgb),0.2);border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>{{MONTH_1_LABEL}}</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{MONTH_1_TITLE}}</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">{{MONTH_1_DESC}}</p></div></div>
-                <div style="background:#FFFFFF;border:1px solid rgba(var(--gold-rgb),0.2);border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>{{MONTH_2_LABEL}}</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{MONTH_2_TITLE}}</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">{{MONTH_2_DESC}}</p></div></div>
-                <div style="background:#FFFFFF;border:1px solid rgba(var(--gold-rgb),0.2);border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>{{MONTH_3_LABEL}}</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{MONTH_3_TITLE}}</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">{{MONTH_3_DESC}}</p></div></div>
-                <div style="background:#FFFFFF;border:1px solid rgba(var(--gold-rgb),0.2);border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>{{MONTH_4_LABEL}}</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{MONTH_4_TITLE}}</h3><p style="font-size:13px;color:var(--text2);line-height:1.6;">{{MONTH_4_DESC}}</p></div></div>
-            </div>
-            <div style="text-align:center;margin-top:24px;"><a href="#apply" class="cta" onclick="openModal(event)">{{CTA_TEXT}}</a></div>
-        </div>
-    </div>
-</section>
-
-<div class="accent-bar sr"></div>
-
-<!-- ============================
-     S6: BONUS (with corner accents + ribbon bg)
-     ============================ -->
-<section id="bonus-section" style="padding:60px 24px;">
-    <div class="container">
-        <div class="bonus-card sr" style="padding:0;overflow:hidden;max-width:600px;">
-            <div class="ribbon-bg"></div>
-            <div style="padding:32px 28px 20px;text-align:center;position:relative;">
-                <h2 style="font-size:clamp(22px,4vw,28px);font-weight:600;margin-bottom:6px;font-style:italic;color:#E8A830;">{{BONUS_HEADLINE}}</h2>
-                <p style="font-size:14px;color:var(--text);">{{BONUS_SUBTEXT}}</p>
-            </div>
-            <div style="padding:0 28px;position:relative;">
-                <!-- [PHOTO] Bonus image -->
-                <img src="{{BONUS_IMAGE}}" alt="{{BONUS_ALT}}" loading="lazy" decoding="async" style="width:90%;height:auto;display:block;margin:0 auto;">
-            </div>
-            <div style="padding:20px 28px 32px;text-align:center;position:relative;">
-                <h3 style="font-size:16px;font-weight:700;margin-bottom:8px;">{{BONUS_CTA_HEADLINE}}</h3>
-                <p style="font-size:13px;color:var(--text2);line-height:1.7;max-width:440px;margin:0 auto 20px;">{{BONUS_DESCRIPTION}}</p>
-                <a href="#apply" class="cta" onclick="openModal(event)">{{CTA_TEXT}}</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="accent-bar sr"></div>
-
-<!-- ============================
-     S7: YOUR MENTOR
-     ============================ -->
-<section style="padding:60px 24px;">
-    <div class="container">
-        <h2 class="sr grad-text" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:20px;">{{MENTOR_SECTION_TITLE}}</h2>
-        <div class="wa-box sr" style="padding:24px 22px;">
-            <div class="team-grid">
-                <div class="team-photo sr-left">
-                    <!-- [PHOTO] Mentor headshot -->
-                    <img src="{{MENTOR_IMAGE}}" alt="{{MENTOR_NAME}}" loading="lazy" decoding="async">
-                </div>
-                <div class="team-info sr-right">
-                    <h3>{{MENTOR_NAME_DISPLAY}}</h3>
-                    <p>{{MENTOR_BIO_1}}</p>
-                    <p>{{MENTOR_BIO_2}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="accent-bar sr"></div>
-
-<!-- ============================
-     S8: URGENCY BOX (optional)
-     ============================ -->
-<section style="padding:60px 24px;">
-    <div class="container">
-        <div class="sr urgency-box">
-            <div style="position:relative;width:100%;height:2px;background:linear-gradient(90deg,transparent,rgba(239,68,68,0.5),rgba(239,68,68,0.8),rgba(239,68,68,0.5),transparent);"></div>
-            <div style="width:100%;height:40px;background-image:radial-gradient(circle 1.5px, rgba(239,68,68,0.4) 100%, transparent 100%);background-size:14px 10px;background-position:center top;mask-image:linear-gradient(to bottom,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0) 100%);pointer-events:none;margin-bottom:10px;"></div>
-            <p style="font-size:clamp(28px,5vw,36px);font-weight:900;margin-bottom:10px;color:#EF4444;">IMPORTANT</p>
-            <h2 style="font-size:clamp(16px,3vw,20px);font-weight:600;margin-bottom:16px;color:#EF4444;">{{URGENCY_HEADLINE}}</h2>
-            <p style="font-size:13px;color:var(--text);margin-bottom:20px;">{{URGENCY_SUBTEXT}}</p>
-            <p style="font-size:clamp(44px,8vw,60px);font-weight:300;margin-bottom:24px;background:linear-gradient(90deg,#666 0%,#999 15%,#fff 45%,#fff 55%,#999 85%,#666 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">{{PRICE}}</p>
-            <div><a href="#apply" class="cta" onclick="openModal(event)">{{CTA_TEXT}}</a></div>
-        </div>
-    </div>
-</section>
-
-<div class="accent-bar sr"></div>
+<!-- TIMELINE, BONUS, MENTOR, URGENCY sections: removed -->
 
 <!-- ============================
      S9: WHAT YOU GET ACCESS TO
@@ -510,35 +397,7 @@
     </div>
 </section>
 
-<div class="accent-bar sr"></div>
-
-<!-- ============================
-     S10: YOUR INVESTMENT
-     ============================ -->
-<section style="padding:60px 24px;" id="apply">
-    <div class="container">
-        <div class="wa-box sr" style="position:relative;overflow:hidden;padding-top:50px;max-width:600px;margin:0 auto;">
-            <div class="gold-line"></div>
-            <div class="gold-dots"></div>
-            <h2 class="grad-text" style="text-align:center;font-size:clamp(28px,5vw,38px);font-weight:600;margin-bottom:28px;">Your Investment</h2>
-            <div class="invest-card" style="border:none;box-shadow:none;max-width:100%;">
-                <div class="tier">{{PROGRAM_NAME}}</div>
-                <div class="price">{{PRICE}}</div>
-                <div class="price-note">{{PAYMENT_PLANS}}</div>
-                <ul>
-                    <li>{{INVEST_ITEM_1}}</li>
-                    <li>{{INVEST_ITEM_2}}</li>
-                    <li>{{INVEST_ITEM_3}}</li>
-                    <li>{{INVEST_ITEM_4}}</li>
-                    <li>{{INVEST_ITEM_5}}</li>
-                </ul>
-                <a href="#" class="cta" style="width:100%;justify-content:center;" onclick="openModal(event)">{{CTA_TEXT}}</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="accent-bar sr"></div>
+<!-- YOUR INVESTMENT section: removed -->
 
 <!-- ============================
      S11: FAQ
@@ -565,8 +424,7 @@
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-title">{{MODAL_TITLE}}</div>
         <div class="modal-sub">{{MODAL_SUBTEXT}}</div>
-        <!-- Replace with client's Tally form embed -->
-        <iframe data-tally-src="{{TALLY_FORM_URL}}" loading="lazy" width="100%" height="307" frameborder="0" marginheight="0" marginwidth="0" title="Application" style="border-radius:8px;display:block;"></iframe>
+        <iframe data-tally-src="https://tally.so/embed/dWl4DV?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="361" frameborder="0" marginheight="0" marginwidth="0" title="Lead Capture (Event Funnel)" style="border-radius:8px;display:block;"></iframe>
     </div>
 </div>
 
