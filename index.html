@@ -33,8 +33,8 @@
         html { scroll-behavior:smooth; }
         html, body { -ms-overflow-style:none; scrollbar-width:none; }
         html::-webkit-scrollbar, body::-webkit-scrollbar { display:none; }
-        body { font-family:'Inter',sans-serif; background:#ffffff; color:var(--text); line-height:1.7; font-size:18px; }
-        .container { max-width:1120px; margin:0 auto; padding:0 32px; }
+        body { font-family:'Inter',sans-serif; background:#ffffff; color:var(--text); line-height:1.7; font-size:20px; }
+        .container { max-width:1160px; margin:0 auto; padding:0 36px; }
         img { max-width:100%; height:auto; }
 
         /* ── Accent + Glow ── */
@@ -49,8 +49,8 @@
         /* ── CTA Button (Gold filled, dark border, shimmer) ── */
         .cta {
             display:inline-flex; align-items:center; justify-content:center;
-            background:linear-gradient(180deg, #E8C84A 0%, #D4AF37 50%, #C49B2F 100%); color:#000; font-weight:700; font-size:18px;
-            padding:22px 120px; border-radius:16px; text-decoration:none;
+            background:linear-gradient(180deg, #E8C84A 0%, #D4AF37 50%, #C49B2F 100%); color:#000; font-weight:700; font-size:20px;
+            padding:24px 130px; border-radius:16px; text-decoration:none;
             border:2px solid #8B6914;
             cursor:pointer; font-family:inherit;
             box-shadow:0 4px 20px rgba(0,0,0,0.15), 0 0 12px rgba(212,175,55,0.1);
@@ -75,40 +75,40 @@
         .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 20px; border:1px solid rgba(var(--accent-rgb),0.3); border-radius:100px; font-size:11px; font-weight:700; color:var(--accent); letter-spacing:2px; background:rgba(var(--accent-rgb),0.06); margin-bottom:28px; }
 
         /* ── Section Boxes ── */
-        .wa-box { background:#fff; border:1px solid #e0e0e0; border-radius:18px; padding:48px 40px; max-width:960px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+        .wa-box { background:#fff; border:1px solid #e0e0e0; border-radius:18px; padding:52px 44px; max-width:1000px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
 
         /* Gold line + polka dot decoration */
         .gold-line { position:absolute;top:0;left:20%;right:20%;height:2px;background:linear-gradient(90deg,transparent,rgba(var(--gold-rgb),0.7),rgba(var(--gold-rgb),0.9),rgba(var(--gold-rgb),0.7),transparent);box-shadow:0 0 8px rgba(var(--gold-rgb),0.4),0 0 20px rgba(var(--gold-rgb),0.2); }
         .gold-dots { position:absolute;top:4px;left:20%;right:20%;height:40px;background-image:radial-gradient(circle 1.5px, rgba(var(--gold-rgb),0.4) 100%, transparent 100%);background-size:14px 10px;background-position:center top;mask-image:linear-gradient(to bottom,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0) 100%);pointer-events:none; }
 
         /* ── 3-Pillar Grid ── */
-        .pillar-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; max-width:920px; margin:0 auto 32px; }
-        .pillar { background:#f5f7fa; border:1px solid #e0e0e0; border-radius:14px; padding:40px 30px; text-align:center; transition:transform 0.4s,box-shadow 0.4s; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
+        .pillar-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; max-width:960px; margin:0 auto 36px; }
+        .pillar { background:#f5f7fa; border:1px solid #e0e0e0; border-radius:16px; padding:44px 32px; text-align:center; transition:transform 0.4s,box-shadow 0.4s; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
         .pillar:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.1); }
-        .pillar-icon { width:52px; height:52px; background:rgba(40,97,228,0.1); border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; }
-        .pillar-icon svg { width:26px; height:26px; stroke:#2861E4; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-        .pillar h3 { font-size:22px; font-weight:700; margin-bottom:6px; color:#111; }
-        .pillar .pname { font-size:12px; font-weight:700; color:var(--accent); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; }
-        .pillar p { font-size:16px; color:#555; line-height:1.7; }
+        .pillar-icon { width:56px; height:56px; background:rgba(40,97,228,0.1); border-radius:14px; display:flex; align-items:center; justify-content:center; margin:0 auto 20px; }
+        .pillar-icon svg { width:28px; height:28px; stroke:#2861E4; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+        .pillar h3 { font-size:24px; font-weight:700; margin-bottom:8px; color:#111; }
+        .pillar .pname { font-size:13px; font-weight:700; color:var(--accent); letter-spacing:1px; text-transform:uppercase; margin-bottom:14px; }
+        .pillar p { font-size:17px; color:#555; line-height:1.7; }
 
         /* ── Checkmark Grid ── */
         .wa-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:760px; margin:0 auto; }
-        .wa-item { display:flex; align-items:flex-start; gap:14px; background:rgba(40,97,228,0.04); border:1px solid #e0e0e0; border-radius:10px; padding:18px 20px; }
-        .wa-icon { min-width:24px; height:24px; background:rgba(var(--accent-rgb),0.15); border-radius:6px; display:flex;align-items:center;justify-content:center; color:var(--accent); font-size:13px; font-weight:700; margin-top:2px; }
-        .wa-item p { font-size:16px; color:var(--text2); line-height:1.6; }
+        .wa-item { display:flex; align-items:flex-start; gap:16px; background:rgba(40,97,228,0.04); border:1px solid #e0e0e0; border-radius:12px; padding:20px 22px; }
+        .wa-icon { min-width:26px; height:26px; background:rgba(var(--accent-rgb),0.15); border-radius:7px; display:flex;align-items:center;justify-content:center; color:var(--accent); font-size:14px; font-weight:700; margin-top:2px; }
+        .wa-item p { font-size:17px; color:var(--text2); line-height:1.65; }
 
         /* ── Before/After Cards ── */
-        .ba-section { padding:70px 24px; content-visibility:auto; contain-intrinsic-size:auto 600px; }
-        .ba-box { background:#fff; border:1px solid #e0e0e0; border-radius:18px; padding:48px 40px; max-width:960px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
-        .ba-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; }
-        .ba-card { border-radius:14px; overflow:hidden; border:none; background:#f5f7fa; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
-        .ba-card-head { padding:20px 24px; font-size:18px; font-weight:700; border-bottom:1px solid #e0e0e0; }
+        .ba-section { padding:80px 24px; content-visibility:auto; contain-intrinsic-size:auto 600px; }
+        .ba-box { background:#fff; border:1px solid #e0e0e0; border-radius:18px; padding:52px 44px; max-width:1000px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+        .ba-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+        .ba-card { border-radius:16px; overflow:hidden; border:none; background:#f5f7fa; box-shadow:0 2px 12px rgba(0,0,0,0.04); }
+        .ba-card-head { padding:22px 26px; font-size:19px; font-weight:700; border-bottom:1px solid #e0e0e0; }
         .ba-card.before .ba-card-head { color:var(--red); }
         .ba-card.before { border-top:2px solid rgba(239,68,68,0.4); }
         .ba-card.after .ba-card-head { color:var(--gold); }
         .ba-card.after { border-top:2px solid rgba(var(--gold-rgb),0.5); }
-        .ba-card ul { list-style:none; padding:22px; margin:0; }
-        .ba-card li { font-size:16px; color:var(--text2); margin-bottom:16px; line-height:1.7; display:flex; align-items:flex-start; gap:10px; }
+        .ba-card ul { list-style:none; padding:24px; margin:0; }
+        .ba-card li { font-size:17px; color:var(--text2); margin-bottom:16px; line-height:1.7; display:flex; align-items:flex-start; gap:12px; }
         .ba-card.before li::before { content:'\2717'; color:var(--red); font-weight:700; min-width:14px; }
         .ba-card.after li::before { content:'\1F451'; min-width:14px; font-size:13px; }
 
@@ -175,9 +175,9 @@
 
         /* Large monitors */
         @media(min-width:1441px) {
-            .container { max-width:1200px; }
-            .hero h1 { font-size:50px; }
-            .hero-sub { font-size:19px; }
+            .container { max-width:1280px; }
+            .hero h1 { font-size:52px; }
+            .hero-sub { font-size:20px; }
         }
 
         /* Tablet landscape / small laptop (1024px) */
@@ -218,7 +218,7 @@
 
         /* Medium phone (600px) */
         @media(max-width:600px) {
-            body { font-size:16px; }
+            body { font-size:17px; }
             .hero h1 { font-size:24px !important; }
             .hero-sub { font-size:14px; }
             .hero img { max-width:260px; }
