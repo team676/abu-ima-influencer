@@ -602,8 +602,8 @@ var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=t
     var body = document.body;
     function onScroll(){
         var bonusTop = bonus.getBoundingClientRect().top + window.scrollY;
-        var transitionStart = bonusTop - window.innerHeight * 0.5;
-        var transitionLength = window.innerHeight * 0.8;
+        var transitionStart = bonusTop - window.innerHeight * 0.3;
+        var transitionLength = window.innerHeight * 0.4;
         var scrollY = window.scrollY;
         if(scrollY <= transitionStart){
             body.style.backgroundColor = '#0a0a0a';
