@@ -11,48 +11,65 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         :root {
-            --accent: #2861E4;
-            --accent-rgb: 40, 97, 228;
-            --accent-dark: #1E4FBF;
+            --a: #2861E4;
+            --ar: 40, 97, 228;
+            --ad: #1E4FBF;
             --bg: #0a0a0a;
-            --bg2: #111111;
-            --text: #ffffff;
-            --text2: #aaaaaa;
-            --text3: #777777;
-            --text4: #555555;
-            --border: #222222;
+            --bg2: #111;
+            --t: #fff;
+            --t2: #aaa;
+            --t3: #777;
+            --t4: #555;
+            --b: #1a1a1a;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html {
-            scroll-behavior: smooth;
-            scrollbar-width: none;
-        }
+        html { scroll-behavior: smooth; scrollbar-width: none; }
         html::-webkit-scrollbar { display: none; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--t); line-height: 1.6; overflow-x: hidden; }
         img { max-width: 100%; height: auto; display: block; }
         a { text-decoration: none; color: inherit; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+        .w { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
 
-        /* ── Utility ── */
-        .g { color: var(--accent); }
-        .accent-bar { height: 2px; background: linear-gradient(90deg, rgba(var(--accent-rgb), 0.6), rgba(var(--accent-rgb), 0.05)); max-width: 800px; margin: 0 auto; }
+        /* ── Accent ── */
+        .g { color: var(--a); }
+        .gi { color: var(--a); font-style: italic; text-shadow: 0 0 20px rgba(var(--ar), 0.5); }
+        .gd { height: 3px; background: linear-gradient(90deg, rgba(var(--ar), 0.8), rgba(var(--ar), 0.05)); max-width: 800px; margin: 0 auto; }
+
+        /* ── Sections ── */
+        .sec { padding: 70px 0; }
+        .sh { text-align: center; font-size: clamp(24px, 4.5vw, 36px); font-weight: 800; margin-bottom: 14px; }
+        .ss { text-align: center; font-size: 15px; color: var(--t2); max-width: 600px; margin: 0 auto 40px; line-height: 1.75; }
+        .cw { text-align: center; margin: 30px 0 10px; }
+
+        /* ── Cards (Ali Khan pattern) ── */
+        .card {
+            background: linear-gradient(160deg, rgba(var(--ar), 0.08) 0%, rgba(22,20,18,1) 35%, rgba(16,15,14,1) 100%);
+            border: 1px solid rgba(var(--ar), 0.1);
+            border-radius: 14px;
+            padding: 30px 24px;
+            transition: transform 0.4s, box-shadow 0.4s;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 20px rgba(var(--ar), 0.06); }
+        .card.center { text-align: center; }
+        .card h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; }
+        .card .sub-name { font-size: 10px; font-weight: 700; color: var(--a); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(var(--ar), 0.3); }
+        .card p { font-size: 13px; color: var(--t2); line-height: 1.65; }
+
+        .pc-icon { width: 44px; height: 44px; background: rgba(var(--ar), 0.12); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+        .pc-icon svg { width: 20px; height: 20px; stroke: var(--a); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+        .g3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
         /* ── Buttons ── */
         .cta {
             display: inline-flex; align-items: center; justify-content: center;
-            background: var(--accent); color: #fff; font-weight: 800; font-size: 16px;
+            background: var(--a); color: #fff; font-weight: 800; font-size: 16px;
             padding: 18px 48px; border-radius: 8px; border: none;
             cursor: pointer; font-family: inherit; letter-spacing: 0.5px;
             transition: transform 0.3s, box-shadow 0.3s;
-            position: relative; overflow: hidden;
-            text-transform: uppercase;
+            position: relative; overflow: hidden; text-transform: uppercase;
         }
         .cta::after {
             content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -60,410 +77,195 @@
             animation: shimmer 3s infinite;
         }
         @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
-        .cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(var(--accent-rgb), 0.3); }
+        .cta:hover { transform: translateY(-2px); box-shadow: 0 0 30px rgba(var(--ar), 0.4); }
 
         /* ══════════════════════════════
-           SECTION 1: HERO
+           HERO
            ══════════════════════════════ */
-        .hero {
-            text-align: center;
-            padding: 0 24px 60px;
-            position: relative;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 50%; transform: translateX(-50%);
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(var(--accent-rgb), 0.08) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .hero-photo-wrap {
-            position: relative;
-            width: 280px; height: 340px;
-            margin: 0 auto 0;
-            z-index: 1;
-        }
-        .hero-photo-wrap img {
-            width: 100%; height: 100%;
-            object-fit: cover;
-            object-position: top center;
-            border-radius: 16px 16px 0 0;
-            mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
-            -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent 100%);
-        }
-        .hero-logo {
-            position: absolute;
-            bottom: 40px; left: 50%; transform: translateX(-50%);
-            width: 140px;
-            z-index: 2;
-            filter: drop-shadow(0 2px 8px rgba(0,0,0,0.6));
-        }
-
+        .hero { text-align: center; padding: 40px 24px 0; }
         .badge {
             display: inline-flex; align-items: center; gap: 8px;
-            padding: 8px 20px;
-            border: 1px solid rgba(var(--accent-rgb), 0.3);
-            border-radius: 100px;
-            font-size: 11px; font-weight: 700; color: var(--accent);
-            letter-spacing: 2px; text-transform: uppercase;
-            background: rgba(var(--accent-rgb), 0.06);
-            margin-bottom: 28px;
-            position: relative; z-index: 1;
+            padding: 8px 20px; border: 1px solid rgba(var(--ar), 0.3);
+            border-radius: 100px; font-size: 11px; font-weight: 700;
+            color: var(--a); letter-spacing: 2px; text-transform: uppercase;
+            background: rgba(var(--ar), 0.06); margin-bottom: 28px;
         }
-        .live-dot {
-            width: 8px; height: 8px;
-            background: var(--accent); border-radius: 50%;
-            animation: pulse 1.5s infinite;
-        }
+        .live-dot { width: 8px; height: 8px; background: var(--a); border-radius: 50%; animation: pulse 1.5s infinite; box-shadow: 0 0 8px var(--a); }
         @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
 
-        .hero h1 {
-            font-size: clamp(28px, 5vw, 44px);
-            font-weight: 900; line-height: 1.12;
-            max-width: 800px; margin: 0 auto 20px;
-            position: relative; z-index: 1;
+        .hero h1 { font-size: clamp(26px, 5vw, 42px); font-weight: 800; line-height: 1.15; max-width: 900px; margin: 0 auto 20px; }
+        .hero-sub { font-size: 16px; color: var(--t2); max-width: 600px; margin: 0 auto 32px; line-height: 1.75; }
+
+        /* Hero photo */
+        .hero-photo {
+            position: relative;
+            width: 280px; height: 360px;
+            margin: 0 auto 8px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid rgba(var(--ar), 0.2);
+            box-shadow: 0 4px 40px rgba(0,0,0,0.5);
         }
-        .hero-sub {
-            font-size: 17px; color: var(--text2);
-            max-width: 620px; margin: 0 auto 36px;
-            line-height: 1.7;
-            position: relative; z-index: 1;
+        .hero-photo img {
+            width: 100%; height: 100%;
+            object-fit: cover; object-position: top center;
         }
+        .hero-photo::after {
+            content: '';
+            position: absolute; bottom: 0; left: 0; right: 0; height: 50%;
+            background: linear-gradient(to bottom, transparent 0%, rgba(10,10,10,0.85) 70%, #0a0a0a 100%);
+            pointer-events: none;
+        }
+        .hero-logo {
+            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+            width: 130px; z-index: 2;
+            filter: drop-shadow(0 2px 10px rgba(0,0,0,0.8));
+        }
+
         .hero-icons {
             display: flex; justify-content: center; gap: 32px;
             margin-top: 28px;
-            position: relative; z-index: 1;
         }
         .hero-icon {
             display: flex; align-items: center; gap: 10px;
-            font-size: 14px; color: var(--text2); font-weight: 500;
+            font-size: 14px; color: var(--t2); font-weight: 500;
         }
         .hero-icon svg {
-            width: 20px; height: 20px;
-            stroke: var(--accent); fill: none;
+            width: 20px; height: 20px; stroke: var(--a); fill: none;
             stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
         }
 
         /* ══════════════════════════════
-           SECTION 2: AUTHORITY
+           AUTHORITY
            ══════════════════════════════ */
-        .authority {
-            padding: 60px 24px;
-            text-align: center;
-        }
-        .authority h2 {
-            font-size: clamp(26px, 5vw, 40px);
-            font-weight: 900; line-height: 1.15;
-            max-width: 800px; margin: 0 auto 16px;
-        }
-        .authority-sub {
-            font-size: 16px; color: var(--text2);
-            max-width: 600px; margin: 0 auto 36px;
-            line-height: 1.7;
-        }
+        .auth-stat { text-align: center; padding: 20px 0 0; }
+        .auth-stat .snum { font-size: clamp(30px, 6vw, 48px); font-weight: 900; line-height: 1.1; margin-bottom: 12px; }
+        .auth-stat .snum .g { font-size: clamp(34px, 7vw, 54px); }
+        .auth-stat .sbody { font-size: 15px; color: var(--t2); line-height: 1.75; max-width: 600px; margin: 0 auto; }
 
-        /* Details box */
-        .details-box {
-            background: var(--bg2);
-            border: 1px solid rgba(var(--accent-rgb), 0.2);
-            border-radius: 16px;
-            padding: 36px 28px;
-            max-width: 860px;
-            margin: 40px auto 0;
+        /* Details box (What/When/Where) */
+        .www-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+            max-width: 860px; margin: 0 auto 32px;
         }
-        .details-box h3 {
-            font-size: 20px; font-weight: 800;
-            margin-bottom: 28px; text-align: center;
-        }
-        .details-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 32px;
-        }
-        .detail-card {
+        .www-card {
             background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 24px 20px;
-            text-align: center;
+            border: 1px solid rgba(var(--ar), 0.2);
+            border-radius: 14px; padding: 28px 24px;
+            transition: transform 0.4s, box-shadow 0.4s;
+            cursor: default; text-align: center;
         }
-        .detail-card .detail-icon {
-            width: 44px; height: 44px;
-            background: rgba(var(--accent-rgb), 0.1);
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 14px;
+        .www-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-color: rgba(var(--ar), 0.4); }
+        .www-card .www-icon {
+            width: 40px; height: 40px; background: rgba(var(--ar), 0.12);
+            border-radius: 10px; display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 16px;
         }
-        .detail-card .detail-icon svg {
-            width: 22px; height: 22px;
-            stroke: var(--accent); fill: none;
-            stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
-        }
-        .detail-card h4 {
-            font-size: 14px; font-weight: 800;
-            color: var(--accent); margin-bottom: 6px;
-            text-transform: uppercase; letter-spacing: 1px;
-        }
-        .detail-card p {
-            font-size: 14px; color: var(--text2); line-height: 1.6;
-        }
+        .www-card .www-icon svg { width: 20px; height: 20px; stroke: var(--a); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+        .www-card h4 { font-size: 20px; font-weight: 800; color: var(--a); margin-bottom: 10px; }
+        .www-card p { font-size: 14px; color: var(--t2); line-height: 1.7; }
 
         /* ══════════════════════════════
-           SECTION 3: WHAT YOU'LL LEARN
+           STORY (WHY LISTEN)
            ══════════════════════════════ */
-        .learn {
-            padding: 60px 24px;
-        }
-        .learn h2 {
-            text-align: center;
-            font-size: clamp(24px, 4.5vw, 34px);
-            font-weight: 800; margin-bottom: 12px;
-        }
-        .learn-intro {
-            text-align: center;
-            font-size: 16px; color: var(--text2);
-            max-width: 600px; margin: 0 auto 40px;
-            line-height: 1.7;
-        }
-        .learn-grid {
-            display: flex; flex-direction: column; gap: 16px;
-            max-width: 860px; margin: 0 auto 40px;
-        }
-        .learn-card {
-            display: flex; align-items: flex-start; gap: 20px;
-            background: var(--bg2);
-            border: 1px solid rgba(var(--accent-rgb), 0.15);
-            border-radius: 14px;
-            padding: 28px 24px;
-        }
-        .learn-num {
-            min-width: 44px; height: 44px;
-            background: rgba(var(--accent-rgb), 0.1);
-            border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 18px; font-weight: 900; color: var(--accent);
-        }
-        .learn-card h3 {
-            font-size: 17px; font-weight: 700;
-            margin-bottom: 6px; line-height: 1.3;
-        }
-        .learn-card p {
-            font-size: 14px; color: var(--text2); line-height: 1.65;
-        }
-        .learn-outcome {
-            max-width: 860px; margin: 0 auto 40px;
-            background: rgba(var(--accent-rgb), 0.04);
-            border: 1px solid rgba(var(--accent-rgb), 0.2);
-            border-radius: 14px;
-            padding: 28px 24px;
-            text-align: center;
-        }
-        .learn-outcome h3 {
-            font-size: 16px; font-weight: 700;
-            color: var(--accent); margin-bottom: 8px;
-        }
-        .learn-outcome p {
-            font-size: 15px; color: var(--text2); line-height: 1.7;
-            max-width: 620px; margin: 0 auto;
-        }
+        .s-row { display: grid; gap: 0; max-width: 900px; margin: 0 auto 48px; background: var(--bg2); border: 1px solid rgba(var(--ar), 0.1); border-radius: 16px; overflow: hidden; }
+        .s-row.tl { grid-template-columns: 50% 50%; }
+        .s-row.tr { grid-template-columns: 50% 50%; }
+        .s-row.tr .s-text { order: -1; }
+        .s-row .s-text { padding: 36px 28px; display: flex; flex-direction: column; justify-content: center; }
+        .s-row .s-text h2 { font-size: clamp(20px, 3.5vw, 26px); font-weight: 900; line-height: 1.15; margin-bottom: 16px; }
+        .s-row .s-text p { font-size: 14px; color: var(--t2); line-height: 1.75; margin-bottom: 12px; }
+        .s-row .s-text p:last-child { margin-bottom: 0; }
+        .s-row .s-img { position: relative; overflow: hidden; min-height: 300px; }
+        .s-row .s-img img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+
+        .story-stats { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+        .ss-num { font-size: 24px; font-weight: 900; color: var(--a); }
+        .ss-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; color: var(--t4); text-transform: uppercase; }
 
         /* ══════════════════════════════
-           SECTION 4: WHY LISTEN
+           CLAIM SPOT
            ══════════════════════════════ */
-        .story {
-            padding: 60px 24px;
-        }
-        .story h2 {
-            text-align: center;
-            font-size: clamp(24px, 4.5vw, 34px);
-            font-weight: 800; margin-bottom: 48px;
-        }
-        .story-block {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-            max-width: 900px;
-            margin: 0 auto 48px;
-            background: var(--bg2);
-            border: 1px solid rgba(var(--accent-rgb), 0.15);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-        .story-block.reverse { direction: rtl; }
-        .story-block.reverse > * { direction: ltr; }
-        .story-img {
-            position: relative; overflow: hidden;
-            min-height: 300px;
-        }
-        .story-img img {
-            position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
-        }
-        .story-text {
-            padding: 36px 28px;
-            display: flex; flex-direction: column; justify-content: center;
-        }
-        .story-text h3 {
-            font-size: 22px; font-weight: 800;
-            margin-bottom: 14px; line-height: 1.2;
-        }
-        .story-text p {
-            font-size: 14px; color: var(--text2); line-height: 1.75;
-            margin-bottom: 10px;
-        }
-        .story-text p:last-child { margin-bottom: 0; }
-        .story-stats {
-            display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
-        }
-        .story-stat {
-            text-align: center;
-        }
-        .story-stat .ss-num {
-            font-size: 24px; font-weight: 900; color: var(--accent);
-        }
-        .story-stat .ss-label {
-            font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
-            color: var(--text4); text-transform: uppercase;
-        }
+        .final-close { padding: 70px 24px; text-align: center; }
+        .final-close h2 { font-size: clamp(22px, 4vw, 30px); font-weight: 800; margin-bottom: 14px; }
+        .final-close .fc-body { font-size: 15px; color: var(--t2); max-width: 540px; margin: 0 auto 32px; line-height: 1.75; }
+        .final-close .cta { padding: 18px 44px; font-size: 16px; }
+        .final-close .fc-details { font-size: 12px; color: var(--t4); margin-top: 16px; }
 
-        /* ══════════════════════════════
-           SECTION 5: CLAIM SPOT
-           ══════════════════════════════ */
-        .claim {
-            padding: 60px 24px 40px;
-            text-align: center;
-        }
-        .claim h2 {
-            font-size: clamp(24px, 4.5vw, 34px);
-            font-weight: 800; margin-bottom: 12px;
-        }
-        .claim-sub {
-            font-size: 15px; color: var(--text2);
-            margin-bottom: 36px;
-        }
         .important-box {
             max-width: 600px; margin: 40px auto 0;
-            background: rgba(var(--accent-rgb), 0.04);
-            border: 1px solid rgba(var(--accent-rgb), 0.2);
-            border-radius: 14px;
-            padding: 24px;
+            background: linear-gradient(160deg, rgba(var(--ar), 0.08) 0%, rgba(22,20,18,1) 35%, rgba(16,15,14,1) 100%);
+            border: 1px solid rgba(var(--ar), 0.15);
+            border-radius: 14px; padding: 28px 24px;
             text-align: left;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
         }
-        .important-box h4 {
-            font-size: 14px; font-weight: 800;
-            color: var(--accent); margin-bottom: 12px;
-            text-transform: uppercase; letter-spacing: 1px;
-        }
+        .important-box h4 { font-size: 14px; font-weight: 800; color: var(--a); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 1px; }
         .important-box li {
-            font-size: 13px; color: var(--text2);
-            margin-bottom: 8px; line-height: 1.6;
-            list-style: none;
-            display: flex; align-items: flex-start; gap: 10px;
+            font-size: 13px; color: var(--t2); margin-bottom: 10px; line-height: 1.6;
+            list-style: none; display: flex; align-items: flex-start; gap: 10px;
         }
-        .important-box li::before {
-            content: '\2713'; color: var(--accent);
-            font-weight: 700; min-width: 14px;
-        }
+        .important-box li::before { content: '\2713'; color: var(--a); font-weight: 700; min-width: 14px; }
 
-        /* ══════════════════════════════
-           FOOTER
-           ══════════════════════════════ */
-        footer {
-            padding: 40px 24px;
-            text-align: center;
-            border-top: 1px solid var(--border);
-            margin-top: 40px;
-        }
-        footer p {
-            font-size: 11px; color: var(--text4); margin-bottom: 6px;
-        }
-        footer a { color: var(--accent); }
-        .disc {
-            font-size: 9px; color: #444;
-            max-width: 600px; margin: 16px auto 0;
-            line-height: 1.6;
-        }
-
-        /* ══════════════════════════════
-           COUNTDOWN
-           ══════════════════════════════ */
-        .countdown {
-            display: flex; justify-content: center; gap: 12px;
-            margin: 24px 0;
-        }
+        /* Countdown */
+        .countdown { display: flex; justify-content: center; gap: 10px; margin: 24px 0 28px; }
         .cd-unit { text-align: center; }
-        .cd-num {
-            background: var(--bg2); border: 1px solid var(--border);
-            border-radius: 8px; padding: 10px 14px;
-            font-size: 22px; font-weight: 800; min-width: 54px;
-        }
-        .cd-label {
-            font-size: 8px; font-weight: 700; letter-spacing: 2px;
-            color: var(--text4); text-transform: uppercase; margin-top: 4px;
-        }
-        .cd-sep {
-            font-size: 22px; font-weight: 800; color: var(--text4); padding-top: 10px;
-        }
+        .cd-num { background: var(--bg2); border: 1px solid var(--b); border-radius: 8px; padding: 10px 14px; font-size: 24px; font-weight: 800; min-width: 56px; }
+        .cd-label { font-size: 8px; font-weight: 700; letter-spacing: 2px; color: var(--t4); text-transform: uppercase; margin-top: 4px; }
+        .cd-sep { font-size: 24px; font-weight: 800; color: var(--t4); padding-top: 10px; }
 
-        /* ══════════════════════════════
-           SCROLL REVEAL
-           ══════════════════════════════ */
+        /* ── Footer ── */
+        footer { padding: 36px 24px; text-align: center; border-top: 1px solid var(--b); }
+        footer p { font-size: 11px; color: var(--t4); margin-bottom: 6px; }
+        footer a { color: var(--a); }
+        .disc { font-size: 9px; color: #444; max-width: 500px; margin: 12px auto; line-height: 1.6; }
+
+        /* ── Scroll Reveal ── */
         .sr { opacity: 0; transform: translateY(25px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .sr.v { opacity: 1; transform: translateY(0); }
 
-        /* ══════════════════════════════
-           RESPONSIVE
-           ══════════════════════════════ */
+        /* ── Responsive ── */
         @media (max-width: 768px) {
+            .g3, .g2 { grid-template-columns: 1fr; }
+            .www-grid { grid-template-columns: 1fr; }
+            .s-row.tl, .s-row.tr { grid-template-columns: 1fr; }
+            .s-row.tr .s-text { order: 0; }
+            .s-row .s-img { min-height: 240px; }
+            .s-row .s-img img { position: relative; width: 100%; height: 250px; object-fit: cover; }
+            .s-row .s-text { padding: 24px 20px; }
+            .hero { padding: 24px 16px 0; }
             .hero h1 { font-size: 26px; }
             .hero-sub { font-size: 15px; }
-            .hero-photo-wrap { width: 220px; height: 280px; }
-            .hero-logo { width: 110px; bottom: 30px; }
+            .hero-photo { width: 220px; height: 290px; }
+            .hero-logo { width: 100px; bottom: 16px; }
             .hero-icons { flex-direction: column; gap: 12px; align-items: center; }
-            .details-grid { grid-template-columns: 1fr; }
-            .learn-card { flex-direction: column; gap: 12px; }
-            .story-block, .story-block.reverse {
-                grid-template-columns: 1fr;
-                direction: ltr;
-            }
-            .story-block.reverse > * { direction: ltr; }
-            .story-img { min-height: 240px; }
-            .story-text { padding: 24px 20px; }
-            .story-text h3 { font-size: 20px; }
-            .authority h2 { font-size: 28px; }
-            .learn h2, .story h2, .claim h2 { font-size: 24px; }
-            .cta { padding: 16px 32px; font-size: 14px; }
-            .details-box { padding: 24px 16px; }
-            .countdown { gap: 8px; }
+            .sec { padding: 50px 0; }
+            .cta { padding: 14px 28px; font-size: 14px; }
+            .countdown { gap: 6px; }
             .cd-num { font-size: 18px; min-width: 46px; padding: 8px 10px; }
-            .story-stats { gap: 16px; }
+            .important-box { padding: 20px 16px; }
         }
-
         @media (max-width: 480px) {
             .hero h1 { font-size: 22px; }
-            .hero-photo-wrap { width: 180px; height: 230px; }
-            .hero-logo { width: 90px; bottom: 24px; }
+            .hero-photo { width: 180px; height: 240px; }
+            .hero-logo { width: 80px; bottom: 12px; }
             .badge { font-size: 9px; padding: 6px 14px; }
-            .story-block { margin: 0 auto 32px; }
+            .sh { font-size: 22px; }
+            .cta { padding: 13px 22px; font-size: 13px; }
         }
     </style>
 </head>
 <body>
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════
      SECTION 1: HERO
-     ══════════════════════════════════════════ -->
-<section class="hero" id="top">
-    <div class="container">
+     ═══════════════════════════════ -->
+<section class="hero">
+    <div class="w">
 
-        <!-- Abu's photo with logo overlay -->
-        <div class="hero-photo-wrap">
-            <img src="/images/abu-hero.jpg" alt="Abu Lahya, Founder of IMA Accelerator" loading="eager">
+        <!-- Photo + logo -->
+        <div class="hero-photo">
+            <img src="/images/abu-hero.jpg" alt="Abu Lahya" loading="eager">
             <img class="hero-logo" src="/images/ima-logo.png" alt="IMA Accelerator" loading="eager">
         </div>
 
@@ -474,15 +276,15 @@
         </div>
 
         <!-- Headline -->
-        <h1>How Muslims Are Replacing Their 9-5<br>With <span class="g">$10K/Month</span> Online<br><span style="font-weight:600; font-size:0.65em; color:var(--text2);">(Without Ecom, FBA, or Trading)</span></h1>
+        <h1>How Muslims Are Replacing Their 9-5<br>With <span class="gi">$10K/Month Online</span><br><span style="font-weight:600;font-size:0.62em;color:var(--t2);">(Without Ecom, FBA, or Trading)</span></h1>
 
-        <!-- Subheadline -->
+        <!-- Sub -->
         <p class="hero-sub">I went from &euro;11/hour to $30K/month with one halal skill. 1,500+ Muslims did the same. Saturday April 26th, I'll break it all down. Live.</p>
 
         <!-- CTA -->
-        <a href="#apply" class="cta">Save My Free Spot</a>
+        <div class="cw" style="margin:0 0 0;"><a href="#apply" class="cta">Save My Free Spot</a></div>
 
-        <!-- Icon pills -->
+        <!-- Icons -->
         <div class="hero-icons">
             <div class="hero-icon">
                 <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
@@ -493,188 +295,163 @@
                 No experience needed
             </div>
         </div>
+
     </div>
 </section>
 
-<div class="accent-bar"></div>
+<!-- ═══════════════════════════════
+     SECTION 2: AUTHORITY
+     ═══════════════════════════════ -->
+<section class="sec sr">
+    <div class="w">
+        <div class="gd" style="margin-bottom:50px;"></div>
 
-<!-- ══════════════════════════════════════════
-     SECTION 2: AUTHORITY + DETAILS
-     ══════════════════════════════════════════ -->
-<section class="authority sr" id="authority">
-    <div class="container">
+        <div class="auth-stat">
+            <div class="snum"><span class="g">1,500+</span> Muslims Taught. <span class="g">94%</span> Get Results.</div>
+            <div class="sbody">From a waiter in France making &euro;11/hour to building a team of 50+ across 7 countries. The system works. The numbers prove it.</div>
+        </div>
 
-        <h2><span class="g">1,500+</span> Muslims Taught.<br>One Skill. <span class="g">94%</span> Walk Away Making Money.</h2>
+        <div class="cw"><a href="#apply" class="cta">Save My Spot</a></div>
 
-        <p class="authority-sub">From a waiter in France making &euro;11/hour to building a team of 50+ across 7 countries. The system works. The numbers prove it.</p>
-
-        <!-- CTA -->
-        <a href="#apply" class="cta">Save My Spot</a>
-
-        <!-- Details box -->
-        <div class="details-box sr">
-            <h3>All the Details</h3>
-            <div class="details-grid">
-                <div class="detail-card">
-                    <div class="detail-icon">
+        <!-- What / When / Where -->
+        <div style="margin-top:40px;">
+            <h2 class="sh">All the Details</h2>
+            <div class="www-grid">
+                <div class="www-card sr">
+                    <div class="www-icon">
                         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     </div>
                     <h4>What</h4>
                     <p>Free live training on the halal skill paying Muslims $3K-$10K/month online</p>
                 </div>
-                <div class="detail-card">
-                    <div class="detail-icon">
+                <div class="www-card sr">
+                    <div class="www-icon">
                         <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
                     <h4>When</h4>
-                    <p>Saturday, April 26th 2026<br>6:00 PM EST / 11:00 PM GMT</p>
+                    <p>Saturday, April 26th 2026<br>6:00 PM EST &middot; 11:00 PM GMT</p>
                 </div>
-                <div class="detail-card">
-                    <div class="detail-icon">
+                <div class="www-card sr">
+                    <div class="www-icon">
                         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
                     <h4>Where</h4>
                     <p>Live on Zoom<br>90 minutes</p>
                 </div>
             </div>
-            <div style="text-align:center;">
-                <a href="#apply" class="cta">Save My Free Spot</a>
-            </div>
+            <div class="cw"><a href="#apply" class="cta">Save My Free Spot</a></div>
         </div>
+
     </div>
 </section>
 
-<div class="accent-bar"></div>
-
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════
      SECTION 3: EVERYTHING YOU'LL LEARN
-     ══════════════════════════════════════════ -->
-<section class="learn sr" id="learn">
-    <div class="container">
+     ═══════════════════════════════ -->
+<section class="sec sr" style="padding-top:0;">
+    <div class="w">
+        <div class="gd" style="margin-bottom:50px;"></div>
+        <h2 class="sh">Everything You'll Learn</h2>
+        <p class="ss">90 minutes. One skill. The full breakdown of how Muslims are building halal income online without trading, ecom, or showing their face.</p>
 
-        <h2>Everything You'll Learn</h2>
-        <p class="learn-intro">90 minutes. One skill. The full breakdown of how Muslims are building halal income online without trading, ecom, or showing their face.</p>
-
-        <div class="learn-grid">
-            <div class="learn-card sr">
-                <div class="learn-num">1</div>
-                <div>
-                    <h3>The Halal Business Model Brands Are Paying $2K-$10K/Month For</h3>
-                    <p>There's a massive gap in the Muslim creator economy. Brands need Muslims to promote to Muslim audiences. 1.8 billion Muslims worldwide. You're the bridge. And they'll pay you for it.</p>
-                </div>
+        <div class="g3">
+            <div class="card center sr">
+                <div class="pc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+                <h3>The Halal Business Model</h3>
+                <div class="sub-name">Brands Pay $2K-$10K/Month For This</div>
+                <p>There's a massive gap in the Muslim creator economy. Brands need Muslims to promote to Muslim audiences. 1.8 billion Muslims worldwide. You're the bridge. And they'll pay you for it.</p>
             </div>
-            <div class="learn-card sr">
-                <div class="learn-num">2</div>
-                <div>
-                    <h3>How Influencer Marketing Works End to End</h3>
-                    <p>Who pays you. What you deliver. Why you don't need inventory, capital, an audience, or to show your face. The lowest barrier to entry with the highest ceiling.</p>
-                </div>
+            <div class="card center sr">
+                <div class="pc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <h3>How It Works End to End</h3>
+                <div class="sub-name">No Inventory. No Capital. No Audience.</div>
+                <p>Who pays you. What you deliver. Why you don't need inventory, capital, an audience, or to show your face. The lowest barrier to entry with the highest ceiling.</p>
             </div>
-            <div class="learn-card sr">
-                <div class="learn-num">3</div>
-                <div>
-                    <h3>The Income Math (And Why 94% Get Results)</h3>
-                    <p>How many clients it takes to hit $5K, $10K, and $30K/month. What you charge each one. And why the people who actually follow this system get results.</p>
-                </div>
+            <div class="card center sr">
+                <div class="pc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                <h3>The Income Math</h3>
+                <div class="sub-name">94% Who Follow the System Get Results</div>
+                <p>How many clients it takes to hit $5K, $10K, and $30K/month. What you charge each one. And why people who follow this system get results.</p>
             </div>
         </div>
 
-        <!-- Outcome box -->
-        <div class="learn-outcome sr">
-            <h3>What You'll Walk Away With</h3>
-            <p>You'll leave knowing exactly how ordinary Muslims are making $3K-$10K/month online, which skill matches your personality, and the steps to land your first client in 30-60 days.</p>
-        </div>
-
-        <div style="text-align:center;">
-            <a href="#apply" class="cta">Save My Free Spot</a>
-        </div>
+        <p style="text-align:center;font-size:15px;color:var(--t);font-weight:600;margin:28px 0 0;">You'll walk away knowing the exact steps to land your first client in <span class="g">30-60 days</span>.</p>
+        <div class="cw"><a href="#apply" class="cta">Save My Free Spot</a></div>
     </div>
 </section>
 
-<div class="accent-bar"></div>
-
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════
      SECTION 4: WHY SHOULD I LISTEN TO YOU?
-     ══════════════════════════════════════════ -->
-<section class="story sr" id="story">
-    <div class="container">
-
-        <h2>Why Should I Listen to You?</h2>
+     ═══════════════════════════════ -->
+<section class="sec sr" style="padding-top:0;">
+    <div class="w">
+        <div class="gd" style="margin-bottom:50px;"></div>
+        <h2 class="sh">Why Should I <span class="gi">Listen</span> to You?</h2>
 
         <!-- Block 1: Origin -->
-        <div class="story-block sr">
-            <div class="story-img">
+        <div class="s-row tl sr">
+            <div class="s-img">
                 <img src="/images/abu-story-1.jpg" alt="Abu Lahya" loading="lazy">
             </div>
-            <div class="story-text">
-                <h3>It Started at &euro;11/Hour in France</h3>
+            <div class="s-text">
+                <h2>It Started at &euro;11/Hour in France</h2>
                 <p>Computer science student. Waiter on the side making &euro;11/hour. I wanted to start a business but every course I found, halfway through, something haram would come up.</p>
                 <p>I spent 6 months longer than everyone else avoiding it. But subhanAllah, from sticking to halal, I ended up more successful than all of them. My business sustained itself better in hard times because it had baraka.</p>
             </div>
         </div>
 
         <!-- Block 2: Scale -->
-        <div class="story-block reverse sr">
-            <div class="story-img">
-                <img src="/images/abu-story-2.jpg" alt="Abu Lahya teaching" loading="lazy">
+        <div class="s-row tr sr">
+            <div class="s-img">
+                <img src="/images/abu-story-2.jpg" alt="Abu Lahya Ramadan series" loading="lazy">
             </div>
-            <div class="story-text">
-                <h3>1,500+ Muslims. 50+ Staff. 7 Countries.</h3>
-                <p>Went from one laptop to 50+ staff in 7 countries. 1,500+ Muslims taught. 94% success rate. This isn't theory. This is what happens when you build something halal from the ground up and actually help people get results.</p>
+            <div class="s-text">
+                <h2>1,500+ Muslims. 50+ Staff. 7 Countries.</h2>
+                <p>Went from one laptop to 50+ staff in 7 countries. 1,500+ Muslims taught. 94% success rate. This is what happens when you build something halal from the ground up and actually help people get results.</p>
                 <div class="story-stats">
-                    <div class="story-stat">
-                        <div class="ss-num">1,500+</div>
-                        <div class="ss-label">Students</div>
-                    </div>
-                    <div class="story-stat">
-                        <div class="ss-num">94%</div>
-                        <div class="ss-label">Success Rate</div>
-                    </div>
-                    <div class="story-stat">
-                        <div class="ss-num">50+</div>
-                        <div class="ss-label">Staff</div>
-                    </div>
+                    <div><div class="ss-num">1,500+</div><div class="ss-label">Students</div></div>
+                    <div><div class="ss-num">94%</div><div class="ss-label">Success Rate</div></div>
+                    <div><div class="ss-num">50+</div><div class="ss-label">Staff</div></div>
                 </div>
             </div>
         </div>
 
         <!-- Block 3: Trust -->
-        <div class="story-block sr">
-            <div class="story-img">
+        <div class="s-row tl sr">
+            <div class="s-img">
                 <img src="/images/abu-story-3.jpg" alt="Abu Lahya in Saudi" loading="lazy">
             </div>
-            <div class="story-text">
-                <h3>Trusted by the Biggest Names in the Ummah</h3>
+            <div class="s-text">
+                <h2>Trusted by the Biggest Names in the Ummah</h2>
                 <p>Partnered with Sheikh Uthman, Imran Ibn Mansour, Abu Bakr The Musafir. Gave away 10,000 business books to Muslims.</p>
                 <p>Built the largest halal online business community. When scholars and creators trust you, it's because the work speaks for itself.</p>
             </div>
         </div>
 
         <!-- Block 4: Results -->
-        <div class="story-block reverse sr">
-            <div class="story-img">
+        <div class="s-row tr sr">
+            <div class="s-img">
                 <img src="/images/abu-story-4.jpg" alt="Abu Lahya in Cape Town" loading="lazy">
             </div>
-            <div class="story-text">
-                <h3>Students Living the Life You Want</h3>
+            <div class="s-text">
+                <h2>Students Living the Life You Want</h2>
                 <p>Osamah made hijrah to Morocco. Farhad retired his mother. Tanny hit 7 figures. These aren't cherry-picked outliers.</p>
                 <p>94 out of 100 people who follow the system get results. That's the power of having the right vehicle, the right support, and baraka in your business.</p>
             </div>
         </div>
 
+        <div class="cw"><a href="#apply" class="cta">Save My Free Spot</a></div>
     </div>
 </section>
 
-<div class="accent-bar"></div>
-
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════
      SECTION 5: CLAIM YOUR SPOT
-     ══════════════════════════════════════════ -->
-<section class="claim sr" id="apply">
-    <div class="container">
-
+     ═══════════════════════════════ -->
+<section class="final-close sr" id="apply">
+    <div class="w">
+        <div class="gd" style="margin-bottom:50px;"></div>
         <h2>Claim Your Spot Below</h2>
-        <p class="claim-sub">You'll get the confirmation sent to your email address.</p>
+        <p class="fc-body">You'll get the confirmation sent to your email address.</p>
 
         <!-- Countdown -->
         <div class="countdown" id="countdown">
@@ -687,10 +464,9 @@
             <div class="cd-unit"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Secs</div></div>
         </div>
 
-        <!-- CTA -->
-        <a href="#apply" class="cta" style="font-size:18px; padding:20px 56px;">Save My Free Spot</a>
+        <a href="#apply" class="cta" style="font-size:18px;padding:20px 56px;">Save My Free Spot</a>
 
-        <!-- Important box -->
+        <!-- Important -->
         <div class="important-box">
             <h4>Important</h4>
             <ul>
@@ -700,13 +476,12 @@
                 <li>Come with questions. There will be a live Q&A with Abu Lahya at the end.</li>
             </ul>
         </div>
-
     </div>
 </section>
 
-<!-- ══════════════════════════════════════════
+<!-- ═══════════════════════════════
      FOOTER
-     ══════════════════════════════════════════ -->
+     ═══════════════════════════════ -->
 <footer>
     <p><a href="https://www.imaccelerator.com" target="_blank">IMA Accelerator</a></p>
     <p><a href="https://www.instagram.com/abu_lahya1" target="_blank">Instagram</a> &middot; <a href="https://www.youtube.com/@AbuLahya" target="_blank">YouTube</a></p>
@@ -715,42 +490,26 @@
     <p class="disc">This site is not a part of the Facebook website or Facebook Inc. This site is NOT endorsed by Facebook in any way. Facebook is a trademark of Facebook, Inc.</p>
 </footer>
 
-<!-- ══════════════════════════════════════════
-     SCRIPTS
-     ══════════════════════════════════════════ -->
 <script>
-// Countdown timer — April 26, 2026 6:00 PM EST (UTC-5)
-(function() {
-    var target = new Date('2026-04-26T23:00:00Z').getTime(); // 6PM EST = 11PM UTC
-    function update() {
-        var now = Date.now();
-        var diff = target - now;
-        if (diff < 0) diff = 0;
-        var d = Math.floor(diff / 86400000);
-        var h = Math.floor((diff % 86400000) / 3600000);
-        var m = Math.floor((diff % 3600000) / 60000);
-        var s = Math.floor((diff % 60000) / 1000);
-        document.getElementById('cd-days').textContent = d < 10 ? '0' + d : d;
-        document.getElementById('cd-hours').textContent = h < 10 ? '0' + h : h;
-        document.getElementById('cd-mins').textContent = m < 10 ? '0' + m : m;
-        document.getElementById('cd-secs').textContent = s < 10 ? '0' + s : s;
+// Countdown — April 26, 2026 6:00 PM EST (UTC-5 = 23:00 UTC)
+(function(){
+    var t=new Date('2026-04-26T23:00:00Z').getTime();
+    function u(){
+        var n=Date.now(),d=t-n;if(d<0)d=0;
+        var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);
+        document.getElementById('cd-days').textContent=dd<10?'0'+dd:dd;
+        document.getElementById('cd-hours').textContent=hh<10?'0'+hh:hh;
+        document.getElementById('cd-mins').textContent=mm<10?'0'+mm:mm;
+        document.getElementById('cd-secs').textContent=ss<10?'0'+ss:ss;
     }
-    update();
-    setInterval(update, 1000);
+    u();setInterval(u,1000);
 })();
 
 // Scroll reveal
-(function() {
-    var els = document.querySelectorAll('.sr');
-    var observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('v');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.1 });
-    els.forEach(function(el) { observer.observe(el); });
+(function(){
+    var els=document.querySelectorAll('.sr');
+    var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');o.unobserve(en.target);}});},{threshold:0.1});
+    els.forEach(function(el){o.observe(el);});
 })();
 </script>
 
