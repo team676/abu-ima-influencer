@@ -219,16 +219,17 @@
 <!-- ============================
      STICKY TOP BAR
      ============================ -->
-<div style="background:#111;border-bottom:1px solid rgba(40,97,228,0.2);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:9999;gap:16px;flex-wrap:wrap;">
-    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;">
-        <img src="/images/ima-logo.png" alt="IMA" style="height:28px;width:auto;">
-        <span style="font-size:11px;font-weight:600;color:var(--text2);letter-spacing:1px;text-transform:uppercase;">Free Live Event</span>
+<div style="background:#111;border-bottom:1px solid rgba(40,97,228,0.2);padding:10px 24px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;position:sticky;top:0;z-index:9999;">
+    <div style="display:flex;align-items:center;">
+        <img src="/images/ima-logo.png" alt="IMA Accelerator" style="height:36px;width:auto;">
     </div>
-    <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;">
+    <div style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;color:#fff;letter-spacing:1px;justify-self:center;">
         <span style="color:var(--text2);font-weight:600;font-size:11px;text-transform:uppercase;">Starts in:</span>
         <span id="top-cd" style="font-variant-numeric:tabular-nums;">--D : --H : --M : --S</span>
     </div>
-    <a href="#apply" style="background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;flex-shrink:0;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(40,97,228,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
+    <div style="display:flex;justify-content:flex-end;">
+        <a href="#apply" style="background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(40,97,228,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
+    </div>
 </div>
 
 <!-- ============================
