@@ -226,60 +226,25 @@
         <span id="top-cd" style="font-variant-numeric:tabular-nums;">--D : --H : --M : --S</span>
     </div>
     <div style="display:flex;justify-content:flex-end;">
-        <a href="#apply" style="background:#0A193B;color:#fff;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:transform 0.3s,box-shadow 0.3s;" onclick="openModal(event)" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(10,25,59,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
+        <a href="#apply" style="background:#0A193B;color:#fff;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:transform 0.3s,box-shadow 0.3s;" onclick="openModal(event)" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(10,25,59,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save My Free Spot</a>
     </div>
 </div>
 <style>@keyframes livedot{0%,100%{opacity:1;box-shadow:0 0 8px #EF4444;}50%{opacity:0.4;box-shadow:0 0 4px #EF4444;}}</style>
 
 <!-- ============================
-     S1: HERO — 3 variants via ?hero=1/2/3
+     S1: HERO (Split layout)
      ============================ -->
-
-<!-- HERO 1: Centered photo above text (current layout, portrait-friendly) -->
-<section class="hero hero-v1" style="background:#0A193B;color:#fff;display:none;">
-    <div class="container">
-        <div style="max-width:280px;margin:40px auto 24px;">
-            <img src="/images/260207-Jeddah-63-web.jpg" alt="Abu Lahya" loading="eager" style="width:100%;height:auto;border-radius:16px;display:block;">
-        </div>
-        <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);"><span class="live-dot"></span> FREE LIVE TRAINING &middot; APRIL 26, 2026</div>
-        <h1 style="color:#fff;">How Muslims Are Replacing Their 9-5<br>With <span style="text-decoration:underline;text-decoration-color:#2861E4;text-underline-offset:6px;">$10K/Month</span> Online</h1>
-        <p class="hero-sub" style="color:rgba(255,255,255,0.7);">Without ecommerce, FBA, or trading. I'll show you the exact halal skill<br>that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
-        <div style="text-align:center;margin-bottom:0;position:relative;z-index:2;">
-            <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
-            <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;">Limited spots available. First come, first served.</p>
-        </div>
-    </div>
-</section>
-
-<!-- HERO 2: Split layout — photo left, text right -->
-<section class="hero hero-v2" style="background:#0A193B;color:#fff;display:none;padding:60px 24px;">
+<section class="hero" style="background:#0A193B;color:#fff;padding:60px 24px;">
     <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1100px;">
         <div style="display:flex;justify-content:center;">
             <img src="/images/260207-Jeddah-63-web.jpg" alt="Abu Lahya" loading="eager" style="width:100%;max-width:400px;height:auto;border-radius:16px;display:block;">
         </div>
         <div>
-            <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:20px;"><span class="live-dot"></span> FREE LIVE TRAINING &middot; APRIL 26, 2026</div>
+            <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:20px;"><span class="live-dot"></span> LIVE FREE MASTERCLASS &middot; APRIL 26, 2026</div>
             <h1 style="color:#fff;text-align:left;font-size:clamp(24px,4vw,38px);">How Muslims Are Replacing Their 9-5 With <span style="text-decoration:underline;text-decoration-color:#2861E4;text-underline-offset:6px;">$10K/Month</span> Online</h1>
-            <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.75;margin:16px 0 28px;">Without ecommerce, FBA, or trading. I'll show you the exact halal skill that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
-            <div>
-                <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
-                <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;">Limited spots available. First come, first served.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- HERO 3: Full-width background image with text overlay -->
-<section class="hero hero-v3" style="display:none;position:relative;min-height:85vh;background:#0A193B;color:#fff;overflow:hidden;">
-    <div style="position:absolute;top:0;right:0;bottom:0;width:50%;background:url('/images/260207-Jeddah-63-web.jpg') center/cover no-repeat;"></div>
-    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,#0A193B 45%,rgba(10,25,59,0.6) 65%,rgba(10,25,59,0.3) 80%,transparent 100%);"></div>
-    <div class="container" style="position:relative;z-index:2;display:flex;align-items:center;min-height:85vh;padding:60px 24px;">
-        <div style="max-width:550px;">
-            <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:20px;"><span class="live-dot"></span> FREE LIVE TRAINING &middot; APRIL 26, 2026</div>
-            <h1 style="color:#fff;text-align:left;font-size:clamp(26px,4.5vw,44px);margin-bottom:16px;">How Muslims Are Replacing Their 9-5 With <span style="text-decoration:underline;text-decoration-color:#2861E4;text-underline-offset:6px;">$10K/Month</span> Online</h1>
-            <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.75;margin-bottom:28px;">Without ecommerce, FBA, or trading. I'll show you the exact halal skill that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
-            <div>
-                <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+            <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.75;margin:16px 0 28px;text-align:left;">Without ecommerce, FBA, or trading. I'll show you the exact halal skill that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
+            <div style="text-align:left;">
+                <a href="#apply" class="cta" onclick="openModal(event)">Save My Free Spot</a>
                 <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;">Limited spots available. First come, first served.</p>
             </div>
         </div>
@@ -288,12 +253,9 @@
 
 <style>
     @media(max-width:768px) {
-        .hero-v2 .container { grid-template-columns:1fr !important; text-align:center; }
-        .hero-v2 h1 { text-align:center !important; }
-        .hero-v3 { min-height:auto !important; padding:40px 0 !important; }
-        .hero-v3 > div:first-child { position:relative !important; width:100% !important; height:300px; }
-        .hero-v3 > div:nth-child(2) { background:linear-gradient(180deg,transparent 0%,#0A193B 30%,#0A193B 100%) !important; }
-        .hero-v3 .container { min-height:auto !important; padding:24px 16px !important; }
+        .hero .container { grid-template-columns:1fr !important; text-align:center !important; }
+        .hero h1 { text-align:center !important; }
+        .hero p, .hero div { text-align:center !important; }
     }
 </style>
 
@@ -332,7 +294,7 @@
             </div>
         </div>
         <div style="text-align:center;margin-top:32px;">
-            <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+            <a href="#apply" class="cta" onclick="openModal(event)">Save My Free Spot</a>
             <p style="font-size:11px;color:#999;margin-top:10px;">Limited spots available. First come, first served.</p>
         </div>
     </div>
@@ -377,7 +339,7 @@
                 </div>
             </div>
             <div style="text-align:center;">
-                <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+                <a href="#apply" class="cta" onclick="openModal(event)">Save My Free Spot</a>
                 <p style="font-size:11px;color:rgba(255,255,255,0.4);margin-top:10px;">Limited spots available. First come, first served.</p>
             </div>
         </div>
@@ -416,7 +378,7 @@
                 </div>
             </div>
             <div style="text-align:center;margin-top:24px;">
-                <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+                <a href="#apply" class="cta" onclick="openModal(event)">Save My Free Spot</a>
                 <p style="font-size:11px;color:#999;margin-top:10px;">Limited spots available. First come, first served.</p>
             </div>
         </div>
@@ -428,46 +390,28 @@
      ============================ -->
 <section style="padding:60px 24px;">
     <div class="container">
-        <h2 class="sr" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:20px;color:#0A193B;">Who Is Abu Lahya?</h2>
-        <div class="wa-box sr" style="padding:24px 22px;">
-            <div class="team-grid">
-                <div class="team-photo sr-left" style="border-color:rgba(40,97,228,0.3);">
-                    <img src="/images/260207-Jeddah-17-web.jpg" alt="Abu Lahya" loading="lazy" decoding="async">
-                </div>
-                <div class="team-info sr-right">
-                    <h3 style="color:#0A193B;">Abu Lahya <span style="color:#2861E4;">(Eyoub)</span></h3>
-                    <p>I was a waiter in France making &euro;11 an hour. Every online business I found had something haram in it halfway through. I spent 6 months longer than everyone else because I refused to cut corners. But subhanAllah, sticking with halal gave my business baraka. And that baraka outperformed everyone who didn't.</p>
-                    <p>Alhamdulillah, today I have a team of 50+ across 7 countries. Over 1,700 Muslims have gone through the IMA system. 94% success rate. $10M+ in combined student revenue. Sheikh Uthman, Imran Ibn Mansour, and Abu Bakr The Musafir have all endorsed what we do. And we gave away 10,000 business books to the ummah. I'm telling you, this works.</p>
-                </div>
+        <h2 class="sr" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#0A193B;">Who Is Abu Lahya?</h2>
+        <div class="sr" style="max-width:900px;margin:0 auto;">
+            <div style="margin-bottom:28px;border-radius:16px;overflow:hidden;">
+                <img src="/images/260207-Jeddah-17-web.jpg" alt="Abu Lahya speaking at HijraCon Jeddah" loading="lazy" decoding="async" style="width:100%;height:auto;display:block;">
+            </div>
+            <div style="max-width:760px;margin:0 auto;">
+                <p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:16px;">Three years ago, I was making &euro;11 an hour as a waiter in France. I was studying computer science. I knew I wanted to build something of my own, but every course I found online, halfway through, something haram would come up. Riba here. Shady tactics there. I couldn't finish a single one with a clean conscience.</p>
+                <p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:16px;">So I spent 6 months longer than everyone else. While my friends were cutting corners and getting results faster, I was stuck. But I refused to compromise on my deen. And subhanAllah, from sticking with halal, my business had baraka in it. It sustained me better than the guys who didn't. That baraka is real.</p>
+                <p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:16px;">I found influencer marketing. I learned how to connect influencers with brands, structure the deals, and take a commission. All via email. No inventory, no capital, no audience needed. I scaled to $30K a month. Then I built a team. Then I started teaching.</p>
+                <p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:16px;">Alhamdulillah, today I have over 50 staff across 7 countries. 1,700+ Muslims have gone through the IMA system. 94% success rate. Over $10 million in combined student revenue. Brothers like Osamah who made hijrah to Morocco. Farhad who retired his mother. Tanny who hit 7 figures.</p>
+                <p style="font-size:15px;color:#555;line-height:1.8;margin-bottom:16px;">Sheikh Uthman, Imran Ibn Mansour, and Abu Bakr The Musafir have all endorsed what we do. We gave away 10,000 business books to the ummah. We flew to Madinah to teach 50 brothers for free. We took the whole team to Makkah for Umrah.</p>
+                <p style="font-size:15px;color:#0A193B;line-height:1.8;font-weight:600;">I'm telling you, this works. And on the 26th, inshaAllah, I'm going to show you exactly how.</p>
             </div>
         </div>
-        <div style="text-align:center;margin-top:24px;">
-            <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+        <div style="text-align:center;margin-top:28px;">
+            <a href="#apply" class="cta" onclick="openModal(event)">Save My Free Spot</a>
             <p style="font-size:11px;color:#999;margin-top:10px;">Limited spots available. First come, first served.</p>
         </div>
     </div>
 </section>
 
-<!-- ============================
-     S11: FAQ
-     ============================ -->
-<section style="padding:60px 24px;">
-    <div class="container">
-        <h2 class="sr" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#0A193B;">Common Questions</h2>
-        <div class="faq-list sr-stagger">
-            <details class="fq"><summary>Is this really free?</summary><div class="fq-a">Yes, wallahi. 100% free. No credit card, no hidden fees. Just show up and learn.</div></details>
-            <details class="fq"><summary>Do I need any experience?</summary><div class="fq-a">No. Most of our 1,700+ students started with zero business or marketing experience. That's what the training is for.</div></details>
-            <details class="fq"><summary>Will there be a replay?</summary><div class="fq-a">Yes. If you register, you'll get access to the replay for 48 hours inshaAllah.</div></details>
-            <details class="fq"><summary>Is everything you teach halal?</summary><div class="fq-a">Everything is halal by design. Abu spent 6 months longer than everyone else avoiding haram when he started. He won't teach you anything he wouldn't do himself. The whole model runs on email, no riba, no haram products, no deception.</div></details>
-            <details class="fq"><summary>What if I can't make it live?</summary><div class="fq-a">It's at 6:00 PM EST on a Sunday, so most people can make it. But if you register, you'll get access to the replay for 48 hours. That said, the live session is where you can ask your questions directly, so I'd do everything you can to be there inshaAllah.</div></details>
-            <details class="fq"><summary>How is influencer marketing different from SMMA or dropshipping?</summary><div class="fq-a">You don't need to run ads, build a website, hold inventory, or get on sales calls. You connect influencers with brands via email and take a commission. 50-100 emails a day, 2-3 hours of work. That's the model. I'll break it all down on the 26th.</div></details>
-        </div>
-        <div style="text-align:center;margin-top:32px;">
-            <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
-            <p style="font-size:11px;color:#999;margin-top:10px;">Limited spots available. First come, first served.</p>
-        </div>
-    </div>
-</section>
+<!-- FAQ section removed -->
 
 <!-- ============================
      APPLICATION MODAL
@@ -494,17 +438,6 @@
 <!-- ============================
      SCRIPTS
      ============================ -->
-
-<!-- Hero variant selector: ?hero=1 (centered), ?hero=2 (split), ?hero=3 (full-width bg) -->
-<script>
-(function(){
-    var p = new URLSearchParams(window.location.search);
-    var v = p.get('hero') || '1';
-    var el = document.querySelector('.hero-v' + v);
-    if (el) { el.style.display = ''; }
-    else { document.querySelector('.hero-v1').style.display = ''; }
-})();
-</script>
 
 <!-- Scroll Reveal -->
 <script>
