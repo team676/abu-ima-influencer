@@ -232,23 +232,70 @@
 <style>@keyframes livedot{0%,100%{opacity:1;box-shadow:0 0 8px #EF4444;}50%{opacity:0.4;box-shadow:0 0 4px #EF4444;}}</style>
 
 <!-- ============================
-     S1: HERO (dark background)
+     S1: HERO — 3 variants via ?hero=1/2/3
      ============================ -->
-<section class="hero" style="background:#0A193B;color:#fff;">
+
+<!-- HERO 1: Centered photo above text (current layout, portrait-friendly) -->
+<section class="hero hero-v1" style="background:#0A193B;color:#fff;display:none;">
     <div class="container">
-        <div class="hero-photo-wrap">
-            <img src="/images/260207-Jeddah-63-web.jpg" alt="Abu Lahya" loading="eager" style="border-radius:16px;">
+        <div style="max-width:280px;margin:40px auto 24px;">
+            <img src="/images/260207-Jeddah-63-web.jpg" alt="Abu Lahya" loading="eager" style="width:100%;height:auto;border-radius:16px;display:block;">
         </div>
         <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);"><span class="live-dot"></span> FREE LIVE TRAINING &middot; APRIL 26, 2026</div>
         <h1 style="color:#fff;">How Muslims Are Replacing Their 9-5<br>With <span style="text-decoration:underline;text-decoration-color:#2861E4;text-underline-offset:6px;">$10K/Month</span> Online</h1>
         <p class="hero-sub" style="color:rgba(255,255,255,0.7);">Without ecommerce, FBA, or trading. I'll show you the exact halal skill<br>that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
-        <div style="text-align:center; margin-bottom:0;position:relative;z-index:2;">
+        <div style="text-align:center;margin-bottom:0;position:relative;z-index:2;">
             <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
             <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;">Limited spots available. First come, first served.</p>
         </div>
     </div>
-    <div style="width:100%;margin-top:-120px;position:relative;z-index:0;overflow:hidden;"><img src="/images/grid-floor.png" alt="" style="width:100%;height:auto;display:block;opacity:0.5;mix-blend-mode:screen;"></div>
 </section>
+
+<!-- HERO 2: Split layout — photo left, text right -->
+<section class="hero hero-v2" style="background:#0A193B;color:#fff;display:none;padding:60px 24px;">
+    <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;max-width:1100px;">
+        <div style="display:flex;justify-content:center;">
+            <img src="/images/260207-Jeddah-63-web.jpg" alt="Abu Lahya" loading="eager" style="width:100%;max-width:400px;height:auto;border-radius:16px;display:block;">
+        </div>
+        <div>
+            <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:20px;"><span class="live-dot"></span> FREE LIVE TRAINING &middot; APRIL 26, 2026</div>
+            <h1 style="color:#fff;text-align:left;font-size:clamp(24px,4vw,38px);">How Muslims Are Replacing Their 9-5 With <span style="text-decoration:underline;text-decoration-color:#2861E4;text-underline-offset:6px;">$10K/Month</span> Online</h1>
+            <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.75;margin:16px 0 28px;">Without ecommerce, FBA, or trading. I'll show you the exact halal skill that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
+            <div>
+                <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+                <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;">Limited spots available. First come, first served.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HERO 3: Full-width background image with text overlay -->
+<section class="hero hero-v3" style="display:none;position:relative;min-height:85vh;background:#0A193B;color:#fff;overflow:hidden;">
+    <div style="position:absolute;top:0;right:0;bottom:0;width:50%;background:url('/images/260207-Jeddah-63-web.jpg') center/cover no-repeat;"></div>
+    <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:linear-gradient(90deg,#0A193B 45%,rgba(10,25,59,0.6) 65%,rgba(10,25,59,0.3) 80%,transparent 100%);"></div>
+    <div class="container" style="position:relative;z-index:2;display:flex;align-items:center;min-height:85vh;padding:60px 24px;">
+        <div style="max-width:550px;">
+            <div class="hero-badge" style="background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.4);color:#fff;padding:12px 28px;font-size:12px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:20px;"><span class="live-dot"></span> FREE LIVE TRAINING &middot; APRIL 26, 2026</div>
+            <h1 style="color:#fff;text-align:left;font-size:clamp(26px,4.5vw,44px);margin-bottom:16px;">How Muslims Are Replacing Their 9-5 With <span style="text-decoration:underline;text-decoration-color:#2861E4;text-underline-offset:6px;">$10K/Month</span> Online</h1>
+            <p style="color:rgba(255,255,255,0.7);font-size:16px;line-height:1.75;margin-bottom:28px;">Without ecommerce, FBA, or trading. I'll show you the exact halal skill that's paying ordinary Muslims $3K-$10K/month to reach Muslim audiences.</p>
+            <div>
+                <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+                <p style="font-size:11px;color:rgba(255,255,255,0.5);margin-top:10px;">Limited spots available. First come, first served.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @media(max-width:768px) {
+        .hero-v2 .container { grid-template-columns:1fr !important; text-align:center; }
+        .hero-v2 h1 { text-align:center !important; }
+        .hero-v3 { min-height:auto !important; padding:40px 0 !important; }
+        .hero-v3 > div:first-child { position:relative !important; width:100% !important; height:300px; }
+        .hero-v3 > div:nth-child(2) { background:linear-gradient(180deg,transparent 0%,#0A193B 30%,#0A193B 100%) !important; }
+        .hero-v3 .container { min-height:auto !important; padding:24px 16px !important; }
+    }
+</style>
 
 <!-- ============================
      S2: WHAT YOU'LL LEARN (Sub-topics)
@@ -447,6 +494,17 @@
 <!-- ============================
      SCRIPTS
      ============================ -->
+
+<!-- Hero variant selector: ?hero=1 (centered), ?hero=2 (split), ?hero=3 (full-width bg) -->
+<script>
+(function(){
+    var p = new URLSearchParams(window.location.search);
+    var v = p.get('hero') || '1';
+    var el = document.querySelector('.hero-v' + v);
+    if (el) { el.style.display = ''; }
+    else { document.querySelector('.hero-v1').style.display = ''; }
+})();
+</script>
 
 <!-- Scroll Reveal -->
 <script>
