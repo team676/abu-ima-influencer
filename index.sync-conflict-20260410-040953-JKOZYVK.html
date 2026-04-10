@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Halal Money Masterclass | Free Live Training | Abu Lahya</title>
+    <meta name="description" content="Join Abu Lahya live April 26th. Learn how brands are paying ordinary Muslims $3K-$10K/month. No followers, no showing your face, no experience required.">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0a'/%3E%3Ctext x='16' y='20' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='10' fill='%232861E4'%3EIMA%3C/text%3E%3C/svg%3E">
+    <!-- TRACKING: Replace with client's tracking pixel -->
+    <!-- <link rel="dns-prefetch" href="https://YOUR-TRACKING-DOMAIN"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"></noscript>
+    <style>
+
+        :root {
+            --accent: #2861E4;
+            --accent-rgb: 40, 97, 228;
+            --bg: #ffffff;
+            --bg2: #f5f7fa;
+            --text: #111111;
+            --text2: #555555;
+            --text3: #888888;
+            --text4: #aaaaaa;
+            --border: #e0e0e0;
+            --red: #EF4444;
+            --gold:#2861E4;
+            --gold-rgb:40,97,228;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        html, body { -ms-overflow-style:none; scrollbar-width:none; }
+        html::-webkit-scrollbar, body::-webkit-scrollbar { display:none; }
+        body { font-family:'Inter',sans-serif; background:#ffffff; color:var(--text); line-height:1.6; }
+        .container { max-width:1000px; margin:0 auto; padding:0 24px; }
+        img { max-width:100%; height:auto; }
+
+        /* ── Accent + Glow ── */
+        .g { color:var(--accent); }
+        .gi { color:var(--accent); font-style:italic; text-shadow:0 0 20px rgba(var(--accent-rgb),0.5); }
+        .grad-text { color:#111; }
+        .hero .grad-text { color:#111; -webkit-text-fill-color:#111; background:none; }
+        .grad-gold { background:linear-gradient(90deg,#009999 0%,#00FFFF 25%,#66FFFF 50%,#00FFFF 75%,#009999 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+        .strike { text-decoration:line-through; color:var(--text3); }
+        .accent-bar { height:2px; background:linear-gradient(90deg,transparent 5%,rgba(var(--gold-rgb),0.5) 30%,rgba(var(--gold-rgb),0.7) 50%,rgba(var(--gold-rgb),0.5) 70%,transparent 95%); max-width:800px; margin:0 auto; }
+
+        /* ── CTA Button (Gold filled, dark border, shimmer) ── */
+        .cta {
+            display:inline-flex; align-items:center; justify-content:center;
+            background:linear-gradient(180deg, #E8C84A 0%, #D4AF37 50%, #C49B2F 100%); color:#000; font-weight:700; font-size:16px;
+            padding:18px 100px; border-radius:14px; text-decoration:none;
+            border:2px solid #8B6914;
+            cursor:pointer; font-family:inherit;
+            box-shadow:0 4px 30px rgba(0,0,0,0.3), 0 0 12px rgba(212,175,55,0.15);
+            transition:transform 0.4s ease, box-shadow 0.4s ease;
+            position:relative; overflow:hidden;
+        }
+        .cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.4), 0 0 20px rgba(212,175,55,0.25); }
+        .cta::after { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent); animation:shimmer 3s infinite; border-radius:14px; pointer-events:none; }
+        @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
+
+        /* ── Hero (dark background) ── */
+        .hero { text-align:center; padding:0 24px 24px; }
+        .hero h1 { font-size:clamp(26px,5vw,42px); font-weight:600; line-height:1.15; max-width:1000px; margin:0 auto 14px; color:#fff; }
+        .hero-sub { font-size:16px; color:#555; max-width:1000px; margin:0 auto 32px; line-height:1.75; }
+        .hero-photo-wrap { position:relative; max-width:320px; margin:40px auto -14px; z-index:1; }
+        .hero-photo-wrap::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:450px; height:450px; border-radius:50%; background:radial-gradient(circle, rgba(40,97,228,0.6) 0%, rgba(40,97,228,0.35) 35%, rgba(40,97,228,0.15) 60%, transparent 100%); z-index:-1; filter:blur(40px); }
+        .hero-photo-wrap img { width:100%; height:auto; display:block; position:relative; z-index:1; }
+        .hero h1 { position:relative; z-index:2; }
+        .hero-badge { display:inline-flex; align-items:center; gap:8px; padding:10px 24px; border-radius:100px; font-size:11px; font-weight:700; color:#00FFFF; letter-spacing:2px; text-transform:uppercase; background:#000000; border:1.5px solid #00FFFF; margin-bottom:14px; position:relative; z-index:3; box-shadow:0 0 15px rgba(0,255,255,0.25); }
+        .hero-badge .live-dot { width:8px; height:8px; background:#EF4444; border-radius:50%; animation:livedot2 1.5s infinite; box-shadow:0 0 8px #EF4444; }
+        @keyframes livedot2{0%,100%{opacity:1;box-shadow:0 0 8px #EF4444;}50%{opacity:0.4;box-shadow:0 0 4px #EF4444;}}
+        .badge { display:inline-flex; align-items:center; gap:8px; padding:8px 20px; border:1px solid rgba(var(--accent-rgb),0.3); border-radius:100px; font-size:11px; font-weight:700; color:var(--accent); letter-spacing:2px; background:rgba(var(--accent-rgb),0.06); margin-bottom:28px; }
+
+        /* ── Section Boxes ── */
+        .wa-box { background:#fff; border:1px solid #e0e0e0; border-radius:16px; padding:36px 28px; max-width:860px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+
+        /* Gold line + polka dot decoration */
+        .gold-line { position:absolute;top:0;left:20%;right:20%;height:2px;background:linear-gradient(90deg,transparent,rgba(var(--gold-rgb),0.7),rgba(var(--gold-rgb),0.9),rgba(var(--gold-rgb),0.7),transparent);box-shadow:0 0 8px rgba(var(--gold-rgb),0.4),0 0 20px rgba(var(--gold-rgb),0.2); }
+        .gold-dots { position:absolute;top:4px;left:20%;right:20%;height:40px;background-image:radial-gradient(circle 1.5px, rgba(var(--gold-rgb),0.4) 100%, transparent 100%);background-size:14px 10px;background-position:center top;mask-image:linear-gradient(to bottom,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0) 100%);-webkit-mask-image:linear-gradient(to bottom,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.2) 50%,rgba(0,0,0,0) 100%);pointer-events:none; }
+
+        /* ── 3-Pillar Grid ── */
+        .pillar-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; max-width:820px; margin:0 auto 24px; }
+        .pillar { background:#f5f7fa; border:1px solid #e0e0e0; border-radius:14px; padding:32px 24px; text-align:center; transition:transform 0.4s,box-shadow 0.4s; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
+        .pillar:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.1); }
+        .pillar-icon { width:48px; height:48px; background:rgba(40,97,228,0.1); border-radius:12px; display:flex; align-items:center; justify-content:center; margin:0 auto 16px; }
+        .pillar-icon svg { width:24px; height:24px; stroke:#2861E4; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+        .pillar h3 { font-size:18px; font-weight:700; margin-bottom:6px; color:#111; }
+        .pillar .pname { font-size:10px; font-weight:700; color:var(--accent); letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; }
+        .pillar p { font-size:13px; color:#555; line-height:1.65; }
+
+        /* ── Checkmark Grid ── */
+        .wa-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; max-width:760px; margin:0 auto; }
+        .wa-item { display:flex; align-items:flex-start; gap:12px; background:rgba(40,97,228,0.04); border:1px solid #e0e0e0; border-radius:10px; padding:16px 18px; }
+        .wa-icon { min-width:22px; height:22px; background:rgba(var(--accent-rgb),0.15); border-radius:6px; display:flex;align-items:center;justify-content:center; color:var(--accent); font-size:12px; font-weight:700; margin-top:2px; }
+        .wa-item p { font-size:14px; color:var(--text2); line-height:1.55; }
+
+        /* ── Before/After Cards ── */
+        .ba-section { padding:60px 24px; content-visibility:auto; contain-intrinsic-size:auto 600px; }
+        .ba-box { background:#fff; border:1px solid #e0e0e0; border-radius:16px; padding:36px 28px; max-width:860px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+        .ba-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+        .ba-card { border-radius:14px; overflow:hidden; border:none; background:#f5f7fa; box-shadow:0 4px 20px rgba(0,0,0,0.06); }
+        .ba-card-head { padding:16px 20px; font-size:15px; font-weight:700; border-bottom:1px solid #e0e0e0; }
+        .ba-card.before .ba-card-head { color:var(--red); }
+        .ba-card.before { border-top:2px solid rgba(239,68,68,0.4); }
+        .ba-card.after .ba-card-head { color:var(--gold); }
+        .ba-card.after { border-top:2px solid rgba(var(--gold-rgb),0.5); }
+        .ba-card ul { list-style:none; padding:20px; margin:0; }
+        .ba-card li { font-size:14px; color:var(--text2); margin-bottom:12px; line-height:1.6; display:flex; align-items:flex-start; gap:10px; }
+        .ba-card.before li::before { content:'\2717'; color:var(--red); font-weight:700; min-width:14px; }
+        .ba-card.after li::before { content:'\1F451'; min-width:14px; font-size:13px; }
+
+        /* ── Timeline/Overview Cards ── */
+        .schedule { padding:60px 24px; content-visibility:auto; contain-intrinsic-size:auto 800px; }
+        .schedule-box { background:#fff; border:1px solid #e0e0e0; border-radius:16px; padding:40px 28px; max-width:960px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.08); }
+
+        /* ── Mentor Section ── */
+        .team-grid { display:grid; grid-template-columns:auto 1fr; gap:40px; align-items:center; max-width:800px; margin:0 auto; }
+        .team-photo { width:200px; height:200px; border-radius:50%; overflow:hidden; border:3px solid rgba(var(--gold-rgb),0.3); box-shadow:0 0 30px rgba(var(--gold-rgb),0.1); flex-shrink:0; }
+        .team-photo img { width:100%; height:100%; object-fit:cover; }
+        .team-info h3 { font-size:24px; font-weight:700; margin-bottom:10px; }
+        .team-info p { font-size:14px; color:var(--text2); line-height:1.7; margin-bottom:12px; }
+        .accent-name { color:var(--gold); font-style:italic; }
+
+        /* ── Investment Card ── */
+        .invest-card { background:#f5f7fa; border:1px solid #e0e0e0; border-radius:16px; padding:36px 28px; max-width:500px; margin:0 auto; box-shadow:0 4px 20px rgba(0,0,0,0.06); text-align:center; }
+        .invest-card .tier { font-size:11px; font-weight:700; color:var(--accent); letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+        .invest-card .price { font-size:clamp(40px,7vw,56px); font-weight:300; margin-bottom:4px; color:#111; }
+        .invest-card .price-note { font-size:13px; color:var(--text3); margin-bottom:20px; }
+        .invest-card ul { list-style:none; margin-bottom:24px; display:inline-flex; flex-direction:column; align-items:flex-start; text-align:left; }
+        .invest-card li { font-size:13px; color:var(--text2); margin-bottom:8px; display:flex; align-items:flex-start; gap:8px; line-height:1.5; }
+        .invest-card li::before { content:'\2B50'; min-width:14px; font-size:13px; }
+
+        /* ── Access List ── */
+        .access-list { list-style:none; max-width:700px; margin:0 auto; display:inline-flex; flex-direction:column; align-items:flex-start; text-align:left; margin-bottom:0; }
+        .access-list li { display:flex; align-items:flex-start; gap:12px; font-size:15px; color:var(--text2); margin-bottom:14px; line-height:1.6; }
+        .access-list li::before { content:'\2B50'; min-width:14px; font-size:13px; }
+
+        /* ── FAQ ── */
+        .fq { border-bottom:1px solid var(--border); }
+        .fq summary { padding:16px 0; cursor:pointer; font-size:14px; font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center; transition:color 0.2s; }
+        .fq summary:hover { color:var(--accent); }
+        .fq summary::-webkit-details-marker { display:none; }
+        .fq summary::after { content:'+'; font-size:18px; font-weight:700; color:var(--gold); transition:transform 0.3s; min-width:18px; text-align:center; }
+        .fq[open] summary::after { transform:rotate(45deg); }
+        .fq-a { padding:0 0 16px; font-size:13px; color:var(--text2); line-height:1.7; }
+
+        /* ── Modal ── */
+        .modal-overlay { display:none; position:fixed; top:0;left:0;right:0;bottom:0; background:rgba(0,0,0,0.85); z-index:10000; align-items:center; justify-content:center; }
+        .modal-overlay.open { display:flex; }
+        .modal-box { background:var(--bg2); border:1px solid rgba(var(--accent-rgb),0.25); border-radius:16px; padding:28px 24px; max-width:420px; width:92%; position:relative; max-height:90vh; overflow-y:auto; box-shadow:0 0 40px rgba(var(--accent-rgb),0.1); }
+        .modal-close { position:absolute; top:12px;right:16px; background:none; border:none; color:var(--text3); font-size:28px; cursor:pointer; line-height:1; }
+        .modal-title { font-size:20px; font-weight:700; margin-bottom:4px; text-align:center; }
+        .modal-sub { font-size:13px; color:var(--text3); text-align:center; margin-bottom:16px; }
+
+        /* ── Footer ── */
+        footer { text-align:center; padding:40px 24px 30px; border-top:1px solid var(--border); margin-top:40px; }
+        footer a { color:var(--accent); text-decoration:none; }
+        footer p { font-size:12px; color:var(--text4); margin-bottom:8px; }
+
+        /* ── Blue Section Overrides ── */
+        .blue-section .ba-box { background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); box-shadow:none; }
+        .blue-section .ba-card { background:rgba(255,255,255,0.1); }
+        .blue-section .ba-card-head { border-bottom:1px solid rgba(255,255,255,0.15); }
+        .blue-section .ba-card.before .ba-card-head { color:#ff9999; }
+        .blue-section .ba-card.before { border-top:2px solid rgba(255,150,150,0.5); }
+        .blue-section .ba-card.after .ba-card-head { color:#00FFFF; }
+        .blue-section .ba-card.after { border-top:2px solid rgba(0,255,255,0.5); }
+        .blue-section .ba-card li { color:rgba(255,255,255,0.85); }
+        .blue-section .ba-card.before li::before { color:#ff9999; }
+        .blue-section .gold-line { background:linear-gradient(90deg,transparent,rgba(255,255,255,0.5),rgba(255,255,255,0.7),rgba(255,255,255,0.5),transparent);box-shadow:none; }
+        .blue-section .gold-dots { background-image:radial-gradient(circle 1.5px, rgba(255,255,255,0.3) 100%, transparent 100%); }
+
+        /* ── Scroll Reveal ── */
+        .sr { opacity:0; transform:translateY(24px); transition:opacity 0.7s cubic-bezier(0.25,0.1,0.25,1), transform 0.7s cubic-bezier(0.25,0.1,0.25,1); }
+        .sr.v { opacity:1; transform:translateY(0) !important; }
+        .sr-left { opacity:0; transform:translateX(-24px); transition:opacity 0.7s cubic-bezier(0.25,0.1,0.25,1), transform 0.7s cubic-bezier(0.25,0.1,0.25,1); }
+        .sr-right { opacity:0; transform:translateX(24px); transition:opacity 0.7s cubic-bezier(0.25,0.1,0.25,1), transform 0.7s cubic-bezier(0.25,0.1,0.25,1); }
+        .sr-left.v, .sr-right.v { opacity:1; transform:translateX(0) !important; }
+        .sr-stagger > * { opacity:0; transform:translateY(24px); transition:opacity 0.7s cubic-bezier(0.25,0.1,0.25,1), transform 0.7s cubic-bezier(0.25,0.1,0.25,1); }
+        .sr-stagger.v > * { opacity:1; transform:translateY(0); }
+        .sr-stagger.v > *:nth-child(1){transition-delay:0s} .sr-stagger.v > *:nth-child(2){transition-delay:0.1s} .sr-stagger.v > *:nth-child(3){transition-delay:0.2s} .sr-stagger.v > *:nth-child(4){transition-delay:0.3s} .sr-stagger.v > *:nth-child(5){transition-delay:0.4s} .sr-stagger.v > *:nth-child(6){transition-delay:0.5s} .sr-stagger.v > *:nth-child(7){transition-delay:0.6s} .sr-stagger.v > *:nth-child(8){transition-delay:0.7s} .sr-stagger.v > *:nth-child(9){transition-delay:0.8s}
+
+        /* ── Responsive ── */
+        @media(min-width:1441px) {
+            .container { max-width:1100px; }
+            .hero h1 { font-size:48px; }
+            .hero-sub { font-size:18px; }
+        }
+        @media(max-width:1024px) {
+            .container { max-width:900px; }
+            .pillar-grid { grid-template-columns:1fr; max-width:500px; }
+            .team-grid { grid-template-columns:1fr; text-align:center; }
+            .team-photo { margin:0 auto; }
+        }
+        @media(max-width:768px) {
+            .container { padding:0 16px; }
+            .hero { padding:24px 16px 0; }
+            .hero h1 { font-size:28px; }
+            .hero-sub { font-size:15px; }
+            .wa-grid { grid-template-columns:1fr; }
+            .ba-grid { grid-template-columns:1fr; }
+            .wa-box, .ba-box, .schedule-box { padding:24px 16px; }
+        }
+        @media(max-width:600px) {
+            .hero h1 { font-size:24px; }
+            .hero-sub { font-size:14px; }
+            .team-photo { width:160px; height:160px; }
+        }
+        @media(max-width:414px) {
+            .hero { padding:20px 12px 0; }
+            .hero h1 { font-size:22px; }
+            .cta { padding:13px 22px; font-size:13px; }
+            .wa-box, .ba-box, .schedule-box { padding:20px 10px; }
+        }
+        @media(max-width:340px) {
+            .hero h1 { font-size:19px; }
+            .hero-sub { font-size:13px; }
+            .cta { padding:12px 18px; font-size:12px; }
+        }
+    </style>
+</head>
+<body>
+<!-- urgency bar removed -->
+
+<!-- ============================
+     STICKY TOP BAR
+     ============================ -->
+<div style="background:#ffffff;border-bottom:3px solid #2861E4;padding:10px 24px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,0.06);">
+    <div style="display:flex;align-items:center;">
+        <img src="/images/ima-logo-dark.png" alt="IMA Accelerator" style="height:36px;width:auto;">
+    </div>
+    <div style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;color:#111;letter-spacing:1px;justify-self:center;">
+        <span style="width:8px;height:8px;background:#EF4444;border-radius:50%;display:inline-block;box-shadow:0 0 8px #EF4444;animation:livedot 1.5s infinite;"></span>
+        <span style="color:#555;font-weight:600;font-size:11px;text-transform:uppercase;">Starts in:</span>
+        <span id="top-cd" style="font-variant-numeric:tabular-nums;">--D : --H : --M : --S</span>
+    </div>
+    <div style="display:flex;justify-content:flex-end;">
+        <a href="#apply" style="background:var(--accent);color:#fff;font-weight:700;font-size:12px;padding:10px 24px;border-radius:8px;text-decoration:none;text-transform:uppercase;letter-spacing:0.5px;transition:transform 0.3s,box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-1px)';this.style.boxShadow='0 4px 20px rgba(40,97,228,0.3)'" onmouseout="this.style.transform='';this.style.boxShadow=''">Save Your Spot</a>
+    </div>
+</div>
+<style>@keyframes livedot{0%,100%{opacity:1;box-shadow:0 0 8px #EF4444;}50%{opacity:0.4;box-shadow:0 0 4px #EF4444;}}</style>
+
+<!-- ============================
+     S1: HERO (stays dark)
+     ============================ -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-photo-wrap">
+            <img src="/images/abu-hero.png" alt="Abu Lahya" loading="eager">
+        </div>
+        <div class="hero-badge"><span class="live-dot"></span> LIVE VIRTUAL EVENT &middot; APRIL 26, 2026</div>
+        <h1 class="grad-text">How To Build A <span class="grad-gold">Halal Way</span><br><span class="grad-gold">$2,307/Week</span> Online Business</h1>
+        <p class="hero-sub">I'll show you, step by step, how brands are paying ordinary Muslims $3K-$10K/month<br>to reach Muslim audiences. No followers, no showing your face, no experience required.</p>
+        <div style="text-align:center; margin-bottom:0;position:relative;z-index:2;">
+            <a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a>
+        </div>
+    </div>
+    <div style="width:100%;margin-top:-120px;position:relative;z-index:0;overflow:hidden;"><img src="/images/grid-floor.png" alt="" style="width:100%;height:auto;display:block;opacity:0.5;mix-blend-mode:screen;"></div>
+</section>
+
+<!-- ============================
+     S2: WHAT YOU WILL LEARN (3 Pillars)
+     ============================ -->
+<section class="walkaway" style="padding:28px 24px 60px;">
+    <div class="container">
+        <div class="wa-box sr" style="position:relative;overflow:hidden;padding-top:50px;border-color:rgba(40,97,228,0.3);">
+            <div class="gold-line"></div>
+            <div class="gold-dots"></div>
+            <h2 style="font-size:clamp(26px,4.5vw,36px);text-align:center;margin-bottom:20px;color:#111;font-weight:700;">Our Muslim Brothers Have Generated<br>Over <span style="color:#2861E4;font-weight:800;">$10 Million</span> Using This System</h2>
+            <div style="text-align:center;max-width:620px;margin:0 auto 32px;background:rgba(var(--accent-rgb),0.04);border:1px solid #e0e0e0;border-radius:10px;padding:14px 20px;">
+                <p style="font-size:15px;color:var(--text2);line-height:1.7;margin:0;">1,500+ Muslims have gone through this program. 94% of those who put in the work walk away making money. These aren't empty promises. These are real brothers, with real results, building real halal businesses.</p>
+            </div>
+            <div class="pillar-grid sr-stagger">
+                <div class="pillar">
+                    <div class="pillar-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>1,500+ Students</h3>
+                    <div class="pname">Across 40+ Countries</div>
+                    <p>Muslims from the UK, US, Canada, Europe, Middle East, and beyond. Software engineers, accountants, drivers, students. All starting from different places. All using the same system.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                    <h3>94% Success Rate</h3>
+                    <div class="pname">Tracked and Documented</div>
+                    <p>94 out of 100 people who follow the system get results. Osamah made hijrah to Morocco. Farhad retired his mother. Tanny hit 7 figures. This is what happens when the vehicle is right.</p>
+                </div>
+                <div class="pillar">
+                    <div class="pillar-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                    <h3>$10M+ Combined Revenue</h3>
+                    <div class="pname">Real Money. Halal Money.</div>
+                    <p>Not theory. Not projections. Over $10 million in tracked, combined student revenue. Brothers closing brand deals, building agencies, and replacing their 9-5 income within 60-90 days.</p>
+                </div>
+            </div>
+            <div style="text-align:center;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     ALL THE DETAILS (What/When/Where) -- stays dark/blue gradient
+     ============================ -->
+<section style="padding:40px 24px 60px;">
+    <div class="container">
+        <div class="sr" style="background:linear-gradient(160deg, rgba(0,255,255,0.12) 0%, rgba(40,97,228,0.15) 30%, rgba(20,40,100,0.1) 60%, rgba(6,6,6,1) 100%); border:1px solid rgba(0,255,255,0.2); border-radius:16px; padding:40px 28px; max-width:860px; margin:0 auto; box-shadow:0 4px 30px rgba(0,0,0,0.4);">
+            <div style="width:60px;height:3px;background:linear-gradient(90deg,#00FFFF,#2861E4);margin:0 auto 20px;border-radius:2px;"></div>
+            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:700;color:#fff;margin-bottom:32px;">All The Details</h2>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px;">
+                <div style="background:linear-gradient(160deg, rgba(0,255,255,0.15) 0%, rgba(40,97,228,0.12) 40%, rgba(10,15,30,0.95) 100%); border:1px solid rgba(0,255,255,0.15); border-radius:14px; padding:28px 20px;">
+                    <div style="width:44px;height:44px;background:rgba(0,255,255,0.12);border:1px solid rgba(0,255,255,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+                        <svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#00FFFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h3 style="font-size:20px;font-weight:800;color:#00FFFF;margin-bottom:10px;">WHAT</h3>
+                    <p style="font-size:13px;color:#aaa;line-height:1.7;">Free 90-minute live training on the halal skill paying ordinary Muslims $3K-$10K/month online. No pitch for the first 60 minutes. Pure value.</p>
+                </div>
+                <div style="background:linear-gradient(160deg, rgba(0,255,255,0.15) 0%, rgba(40,97,228,0.12) 40%, rgba(10,15,30,0.95) 100%); border:1px solid rgba(0,255,255,0.15); border-radius:14px; padding:28px 20px;">
+                    <div style="width:44px;height:44px;background:rgba(0,255,255,0.12);border:1px solid rgba(0,255,255,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+                        <svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#00FFFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    </div>
+                    <h3 style="font-size:20px;font-weight:800;color:#00FFFF;margin-bottom:10px;">WHEN</h3>
+                    <p style="font-size:13px;color:#aaa;line-height:1.7;">Saturday, April 26th 2026<br>6:00 PM EST &middot; 11:00 PM GMT</p>
+                </div>
+                <div style="background:linear-gradient(160deg, rgba(0,255,255,0.15) 0%, rgba(40,97,228,0.12) 40%, rgba(10,15,30,0.95) 100%); border:1px solid rgba(0,255,255,0.15); border-radius:14px; padding:28px 20px;">
+                    <div style="width:44px;height:44px;background:rgba(0,255,255,0.12);border:1px solid rgba(0,255,255,0.25);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+                        <svg viewBox="0 0 24 24" style="width:22px;height:22px;stroke:#00FFFF;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h3 style="font-size:20px;font-weight:800;color:#00FFFF;margin-bottom:10px;">WHERE</h3>
+                    <p style="font-size:13px;color:#aaa;line-height:1.7;">Live on Zoom<br>90 minutes<br>Replay available for 48 hours</p>
+                </div>
+            </div>
+            <div style="text-align:center;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     S4: BEFORE/AFTER
+     ============================ -->
+<section class="ba-section" style="padding:60px 24px;">
+    <div class="container">
+        <div class="ba-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
+            <div class="gold-line"></div>
+            <div class="gold-dots"></div>
+            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#111;">What Changes After This Training</h2>
+            <div class="ba-grid sr-stagger">
+                <div class="ba-card before">
+                    <div class="ba-card-head">Before The Halal Money Masterclass</div>
+                    <ul>
+                        <li>Stuck in a 9-5 asking permission to pray, rushing salah at your desk</li>
+                        <li>Trying random online business models that don't work or aren't halal</li>
+                        <li>Watching your parents get older while your income stays capped</li>
+                        <li>No clarity on which skill to learn or where to start</li>
+                        <li>Feeling like everyone online is scamming you</li>
+                    </ul>
+                </div>
+                <div class="ba-card after">
+                    <div class="ba-card-head">After The Halal Money Masterclass</div>
+                    <ul>
+                        <li>A clear, step-by-step system to make $3K-$10K/month from anywhere</li>
+                        <li>One halal skill that matches your personality and pays real money</li>
+                        <li>A proven path to replace your 9-5 and make hijrah on your timeline</li>
+                        <li>Proof of concept: you'll know exactly how brothers are closing brand deals</li>
+                        <li>A community of 1,500+ Muslims all building halal income together</li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:24px;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     S5: EVERYTHING YOU'LL LEARN
+     ============================ -->
+<section class="schedule">
+    <div class="container">
+        <div class="schedule-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
+            <div class="gold-line"></div>
+            <div class="gold-dots"></div>
+            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#111;">Everything You'll Learn</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:800px;margin:0 auto;">
+                <div style="background:#f5f7fa;border:1px solid #e0e0e0;border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>TOPIC 01</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#111;">The Halal Business Model</h3><p style="font-size:13px;color:#555;line-height:1.6;">There are 1.8 billion Muslims worldwide and brands need people who understand the culture to promote to them. You're the bridge. They pay you $2K-$10K per campaign. All via email.</p></div></div>
+                <div style="background:#f5f7fa;border:1px solid #e0e0e0;border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>TOPIC 02</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#111;">The Personality-Skill Match</h3><p style="font-size:13px;color:#555;line-height:1.6;">Extroverts go into sales. Introverts go into copywriting and email. Tech people build automations. All four skills feed into influencer marketing. You pick the one that fits you.</p></div></div>
+                <div style="background:#f5f7fa;border:1px solid #e0e0e0;border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>TOPIC 03</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#111;">The Income Math</h3><p style="font-size:13px;color:#555;line-height:1.6;">One brand deal pays $2,000-$5,000. Two clients a month and you're at $4K-$10K. We'll break down the exact numbers and why 94% of people who follow the system get results.</p></div></div>
+                <div style="background:#f5f7fa;border:1px solid #e0e0e0;border-radius:14px;overflow:hidden;transition:transform 0.3s;"><div style="height:4px;background:linear-gradient(90deg,rgba(var(--gold-rgb),0.8),rgba(var(--gold-rgb),0.15));"></div><div style="padding:24px 20px;"><div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:10px;"><div style="width:44px;height:44px;background:rgba(var(--gold-rgb),0.12);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>TOPIC 04</div><h3 style="font-size:16px;font-weight:700;margin-bottom:8px;color:#111;">Your First Client in 30-60 Days</h3><p style="font-size:13px;color:#555;line-height:1.6;">The step-by-step action plan to go from zero to your first paying client. How to send 50 emails, close your first deal, and build proof that compounds into bigger deals.</p></div></div>
+            </div>
+            <div style="text-align:center;margin-top:24px;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+        </div>
+    </div>
+</section>
+
+<div class="accent-bar sr"></div>
+
+<!-- ============================
+     S7: WHY SHOULD I LISTEN TO YOU (story blocks)
+     ============================ -->
+<section style="padding:60px 24px;">
+    <div class="container" style="max-width:900px;">
+        <h2 class="sr" style="text-align:center;font-size:clamp(24px,4.5vw,36px);font-weight:700;margin-bottom:40px;color:#111;">Why Should I Listen to You?</h2>
+
+        <!-- Block 1 -->
+        <div class="sr" style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:40px;background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+            <div style="position:relative;overflow:hidden;min-height:300px;">
+                <img src="/images/abu-story-1.jpg" alt="Abu Lahya" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:36px 28px;display:flex;flex-direction:column;justify-content:center;">
+                <h3 style="font-size:22px;font-weight:800;margin-bottom:14px;color:var(--accent);">It Started at &euro;11/Hour in France</h3>
+                <p style="font-size:14px;color:#555;line-height:1.75;margin-bottom:12px;">Computer science student. Waiter on the side making &euro;11/hour. Every course I found, halfway through, something haram would come up. Dropshipping had haram products. Trading courses pushed riba.</p>
+                <p style="font-size:14px;color:#555;line-height:1.75;">I spent 6 months longer than everyone else because I refused to compromise on halal. But subhanAllah, from sticking to it, I ended up more successful than all of them. My business sustained itself better in hard times because it had baraka.</p>
+            </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div class="sr" style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:40px;background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+            <div style="padding:36px 28px;display:flex;flex-direction:column;justify-content:center;">
+                <h3 style="font-size:22px;font-weight:800;margin-bottom:14px;color:var(--accent);">1,500+ Muslims. $10M+ Revenue. 50+ Staff.</h3>
+                <p style="font-size:14px;color:#555;line-height:1.75;margin-bottom:12px;">Went from one laptop to 50+ staff across 7 countries. 1,500+ Muslims taught with a 94% success rate. 12 mentors running 15-20 live coaching calls every single week.</p>
+                <div style="display:flex;gap:24px;margin-top:12px;flex-wrap:wrap;">
+                    <div><div style="font-size:24px;font-weight:900;color:var(--accent);">1,500+</div><div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#999;text-transform:uppercase;">Students</div></div>
+                    <div><div style="font-size:24px;font-weight:900;color:var(--accent);">94%</div><div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#999;text-transform:uppercase;">Success Rate</div></div>
+                    <div><div style="font-size:24px;font-weight:900;color:var(--accent);">50+</div><div style="font-size:10px;font-weight:700;letter-spacing:1.5px;color:#999;text-transform:uppercase;">Staff</div></div>
+                </div>
+            </div>
+            <div style="position:relative;overflow:hidden;min-height:300px;">
+                <img src="/images/abu-story-2.jpg" alt="Abu Lahya Ramadan" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+            </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div class="sr" style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:40px;background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+            <div style="position:relative;overflow:hidden;min-height:300px;">
+                <img src="/images/abu-story-3.jpg" alt="Abu Lahya Saudi" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="padding:36px 28px;display:flex;flex-direction:column;justify-content:center;">
+                <h3 style="font-size:22px;font-weight:800;margin-bottom:14px;color:var(--accent);">Trusted by the Biggest Names in the Ummah</h3>
+                <p style="font-size:14px;color:#555;line-height:1.75;margin-bottom:12px;">Partnered with Sheikh Uthman, Imran Ibn Mansour, Abu Bakr The Musafir, Sheikh Odouro. Gave away 10,000 business books to Muslims worldwide.</p>
+                <p style="font-size:14px;color:#555;line-height:1.75;">When scholars and creators trust you, it's because the work speaks for itself.</p>
+            </div>
+        </div>
+
+        <!-- Block 4 -->
+        <div class="sr" style="display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:20px;background:#fff;border:1px solid #e0e0e0;border-radius:16px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
+            <div style="padding:36px 28px;display:flex;flex-direction:column;justify-content:center;">
+                <h3 style="font-size:22px;font-weight:800;margin-bottom:14px;color:var(--accent);">Students Living the Life You Want</h3>
+                <p style="font-size:14px;color:#555;line-height:1.75;margin-bottom:12px;">Osamah packed his bags and moved to Morocco. He prays every salah on time. His kids go to Islamic school. Farhad retired his mother. Tanny hit 7 figures.</p>
+                <p style="font-size:14px;color:#555;line-height:1.75;">94 out of 100 people who follow the system get results. That's the power of having the right vehicle, the right mentors, and baraka in your business.</p>
+            </div>
+            <div style="position:relative;overflow:hidden;min-height:300px;">
+                <img src="/images/abu-story-4.jpg" alt="Abu Lahya Cape Town" loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;">
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:30px;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+    </div>
+</section>
+
+<!-- ============================
+     S10: CLAIM YOUR SPOT (Blue background)
+     ============================ -->
+<section style="padding:60px 24px;background:#2861E4;" id="apply">
+    <div class="container">
+        <div class="wa-box sr" style="position:relative;overflow:hidden;padding-top:50px;max-width:600px;margin:0 auto;">
+            <div class="gold-line"></div>
+            <div class="gold-dots"></div>
+            <h2 style="text-align:center;font-size:clamp(28px,5vw,38px);font-weight:600;margin-bottom:8px;color:#111;">Claim Your Spot Below</h2>
+            <p style="text-align:center;font-size:14px;color:#555;margin-bottom:28px;">You'll get the confirmation sent to your email address.</p>
+            <div class="invest-card" style="border:none;box-shadow:none;max-width:100%;">
+                <div class="tier">FREE LIVE TRAINING</div>
+                <div class="price">FREE</div>
+                <div class="price-note">Saturday, April 26th at 6:00 PM EST</div>
+                <ul>
+                    <li>90-minute live training with Abu Lahya</li>
+                    <li>Full breakdown of the halal business model</li>
+                    <li>Live Q&amp;A session</li>
+                    <li>48-hour replay access</li>
+                    <li>Saturday, April 26th at 6:00 PM EST</li>
+                </ul>
+                <a href="#" class="cta" style="width:100%;justify-content:center;" onclick="openModal(event)">Save Your Spot</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================
+     APPLICATION MODAL
+     ============================ -->
+<div class="modal-overlay" id="applyModal" onclick="if(event.target===this)closeModal()">
+    <div class="modal-box">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-title">Save Your Spot</div>
+        <div class="modal-sub">You'll get the details sent to your email.</div>
+        <!-- Replace with client's Tally form embed -->
+        <iframe data-tally-src="{{TALLY_FORM_URL}}" loading="lazy" width="100%" height="307" frameborder="0" marginheight="0" marginwidth="0" title="Application" style="border-radius:8px;display:block;"></iframe>
+    </div>
+</div>
+
+<!-- ============================
+     FOOTER
+     ============================ -->
+<footer>
+    <p><a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms-of-service">Terms of Service</a></p>
+    <p style="font-size:9px;color:#aaa;max-width:500px;margin:12px auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of META, Inc.</p>
+    <p>&copy; 2026 IMA Accelerator. All Rights Reserved.</p>
+    <p>Contact: <a href="mailto:support@imaaccelerator.com">support@imaaccelerator.com</a></p>
+</footer>
+
+<!-- ============================
+     SCRIPTS
+     ============================ -->
+
+<!-- Scroll Reveal -->
+<script>
+try{
+    var els=document.querySelectorAll('.sr,.sr-left,.sr-right,.sr-stagger');
+    if(els.length&&'IntersectionObserver' in window){
+        var o=new IntersectionObserver(function(ee){ee.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');o.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
+        els.forEach(function(el){o.observe(el)});
+    }else{els.forEach(function(el){el.classList.add('v')})}
+}catch(x){document.querySelectorAll('.sr,.sr-left,.sr-right,.sr-stagger').forEach(function(el){el.classList.add('v')})}
+</script>
+
+<!-- Modal -->
+<script>
+function openModal(e){if(e)e.preventDefault();document.getElementById('applyModal').classList.add('open');document.body.style.overflow='hidden';}
+function closeModal(){document.getElementById('applyModal').classList.remove('open');document.body.style.overflow='';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+</script>
+
+<!-- Tally Form Loader -->
+<script>
+var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
+</script>
+
+<!-- Top bar countdown: April 26, 2026 6PM EST = 23:00 UTC -->
+<script>
+(function(){
+    var t=new Date('2026-04-26T23:00:00Z').getTime();
+    var el=document.getElementById('top-cd');
+    if(!el)return;
+    function u(){
+        var d=t-Date.now();if(d<0)d=0;
+        var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);
+        el.textContent=(dd<10?'0'+dd:dd)+'D : '+(hh<10?'0'+hh:hh)+'H : '+(mm<10?'0'+mm:mm)+'M : '+(ss<10?'0'+ss:ss)+'S';
+    }
+    u();setInterval(u,1000);
+})();
+</script>
+
+<!-- TRACKING: Replace with client's tracking script -->
+<!-- <script>var h=document.head,s=document.createElement('script');s.type='text/javascript';s.defer=true;s.src="YOUR_TRACKING_URL";h.appendChild(s);</script> -->
+
+</body>
+</html>
