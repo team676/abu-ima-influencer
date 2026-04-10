@@ -60,7 +60,7 @@
         /* ── Cards ── */
         .card {
             background:linear-gradient(160deg,rgba(var(--ar),0.08) 0%,rgba(22,20,18,1) 35%,rgba(16,15,14,1) 100%);
-            border:1px solid rgba(var(--ar),0.12); border-radius:14px;
+            border:1px solid rgba(var(--ar),0.1); border-radius:14px;
             padding:30px 24px; transition:transform 0.4s,box-shadow 0.4s;
             box-shadow:0 4px 20px rgba(0,0,0,0.3);
         }
@@ -71,7 +71,7 @@
         .card p { font-size:13px; color:var(--t2); line-height:1.65; }
         .pc-icon { width:44px;height:44px; background:rgba(var(--ar),0.12); border-radius:10px; display:flex;align-items:center;justify-content:center; margin:0 auto 12px; }
         .pc-icon svg { width:20px;height:20px; stroke:var(--a); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-        .mc-bar { height:4px; background:linear-gradient(90deg,rgba(var(--ar),0.8),rgba(var(--ar),0.15)); border-radius:14px 14px 0 0; }
+        .mc-bar { height:3px; background:linear-gradient(90deg,rgba(var(--ar),0.8),rgba(var(--ar),0.15)); border-radius:14px 14px 0 0; }
 
         /* ══════════════════════════════
            HERO
@@ -88,16 +88,14 @@
             pointer-events:none; z-index:0;
         }
 
-        /* Photo area — transparent cutout, large and prominent */
         .hero-img-wrap {
-            position:relative; max-width:900px; height:640px;
+            position:relative; max-width:900px; height:420px;
             margin:0 auto -20px; z-index:1;
         }
         .hero-img-wrap img.hero-photo {
             width:100%; height:100%;
             object-fit:contain; object-position:center bottom;
         }
-        /* IMA logo positioned at lower chest */
         .hero-logo {
             position:absolute; bottom:30px; left:50%; transform:translateX(-50%);
             width:200px; z-index:3;
@@ -110,21 +108,21 @@
             border-radius:100px; font-size:11px; font-weight:700;
             color:#fff; letter-spacing:2px; text-transform:uppercase;
             background:linear-gradient(135deg, #1a5a1a 0%, #22892e 100%);
-            margin-bottom:28px; position:relative; z-index:1;
+            margin-bottom:24px; position:relative; z-index:1;
             box-shadow:0 0 20px rgba(34,137,46,0.3);
         }
         .live-dot { width:8px;height:8px; background:#EF4444; border-radius:50%; animation:pulse 1.5s infinite; box-shadow:0 0 8px #EF4444; }
         @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
 
         .hero h1 { font-size:clamp(26px,5vw,44px); font-weight:800; line-height:1.15; max-width:900px; margin:0 auto 20px; position:relative; z-index:1; }
-        .hero-sub { font-size:16px; color:var(--t2); max-width:620px; margin:0 auto 32px; line-height:1.75; position:relative; z-index:1; }
+        .hero-sub { font-size:15px; color:var(--t2); max-width:640px; margin:0 auto 28px; line-height:1.8; position:relative; z-index:1; }
 
-        .hero-icons { display:flex; justify-content:center; gap:32px; margin-top:24px; position:relative; z-index:1; }
+        .hero-icons { display:flex; justify-content:center; gap:32px; margin-top:20px; position:relative; z-index:1; }
         .hero-icon { display:flex; align-items:center; gap:10px; font-size:13px; color:var(--t3); font-weight:600; }
         .hero-icon svg { width:18px;height:18px; stroke:var(--a); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
 
         /* ══════════════════════════════
-           DETAILS CARDS (Eman-style gradients)
+           DETAILS CARDS
            ══════════════════════════════ */
         .detail-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:860px; margin:0 auto 32px; }
         .detail-card {
@@ -142,6 +140,35 @@
         .detail-card .d-icon svg { width:22px;height:22px; stroke:var(--a); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
         .detail-card h4 { font-size:22px; font-weight:800; color:var(--a); margin-bottom:10px; }
         .detail-card p { font-size:14px; color:var(--t2); line-height:1.7; }
+
+        /* ══════════════════════════════
+           WHO THIS IS FOR
+           ══════════════════════════════ */
+        .who-card {
+            background:linear-gradient(160deg,rgba(var(--ar),0.08) 0%,rgba(22,20,18,1) 35%,rgba(16,15,14,1) 100%);
+            border:1px solid rgba(var(--ar),0.1); border-radius:14px;
+            padding:24px 22px; transition:transform 0.4s,box-shadow 0.4s;
+            box-shadow:0 4px 20px rgba(0,0,0,0.3);
+            display:flex; align-items:flex-start; gap:14px;
+        }
+        .who-card:hover { transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.5),0 0 20px rgba(var(--ar),0.06); }
+        .who-card .who-check {
+            width:28px; height:28px; min-width:28px; background:rgba(var(--ar),0.15);
+            border-radius:8px; display:flex; align-items:center; justify-content:center; margin-top:2px;
+        }
+        .who-card .who-check svg { width:14px; height:14px; stroke:var(--a); fill:none; stroke-width:3; stroke-linecap:round; stroke-linejoin:round; }
+        .who-card p { font-size:14px; color:var(--t2); line-height:1.65; }
+
+        .not-for-box {
+            background:rgba(239,68,68,0.04); border:1px solid rgba(239,68,68,0.25);
+            border-radius:14px; padding:28px 24px; max-width:700px; margin:32px auto 0;
+        }
+        .not-for-box h4 { font-size:16px; font-weight:800; color:#EF4444; margin-bottom:16px; }
+        .not-for-box li {
+            font-size:14px; color:var(--t2); line-height:1.65; margin-bottom:10px;
+            list-style:none; display:flex; align-items:flex-start; gap:10px;
+        }
+        .not-for-box li::before { content:'\2717'; color:#EF4444; font-weight:700; min-width:14px; }
 
         /* ══════════════════════════════
            STORY (WHY LISTEN)
@@ -223,8 +250,8 @@
             .s-row .s-img img { position:relative; width:100%; height:250px; }
             .s-row .s-text { padding:24px 20px; }
             .hero h1 { font-size:26px; }
-            .hero-sub { font-size:15px; }
-            .hero-img-wrap { height:480px; max-width:100%; }
+            .hero-sub { font-size:14px; }
+            .hero-img-wrap { height:360px; max-width:100%; }
             .hero-logo { width:160px; bottom:20px; }
             .hero-icons { flex-direction:column; gap:12px; align-items:center; }
             .sec { padding:50px 0; }
@@ -234,7 +261,7 @@
         }
         @media(max-width:480px) {
             .hero h1 { font-size:22px; }
-            .hero-img-wrap { height:380px; }
+            .hero-img-wrap { height:300px; }
             .hero-logo { width:130px; bottom:14px; }
             .badge { font-size:9px; padding:6px 14px; }
             .sh { font-size:22px; }
@@ -250,7 +277,7 @@
 <section class="hero">
     <div class="w">
 
-        <!-- Photo — wide, edges fade into dark bg -->
+        <!-- Photo -->
         <div class="hero-img-wrap">
             <img class="hero-photo" src="/images/abu-hero.png" alt="Abu Lahya" loading="eager">
             <img class="hero-logo" src="/images/ima-logo.png" alt="IMA Accelerator" loading="eager">
@@ -265,8 +292,8 @@
         <!-- Headline -->
         <h1>How Muslims Are Replacing Their 9-5<br>With <span class="gi">$10K/Month Online</span><br><span style="font-weight:600;font-size:0.62em;color:var(--t2);">(Without Ecom, FBA, or Trading)</span></h1>
 
-        <!-- Sub -->
-        <p class="hero-sub">I went from &euro;11/hour to $30K/month with one halal skill. 1,500+ Muslims did the same. Saturday April 26th, I'll break it all down. Live.</p>
+        <!-- Subheadline -->
+        <p class="hero-sub">You're asking permission to pray at work. Your income is capped no matter how hard you grind. You've tried ecom, FBA, trading, and none of it worked. I went from &euro;11/hour to $30K/month with one halal skill. 1,500+ Muslims did the same. Saturday April 26th, I'll show you the full system. Live.</p>
 
         <!-- CTA -->
         <div class="cw" style="margin:0;"><a href="#apply" class="cta">Save My Free Spot</a></div>
@@ -293,8 +320,8 @@
         <div class="gd" style="margin-bottom:50px;"></div>
 
         <div class="auth-stat">
-            <div class="snum"><span class="g">1,500+</span> Muslims Taught. <span class="g">94%</span> Get Results.</div>
-            <div class="sbody">From a waiter in France making &euro;11/hour to building a team of 50+ across 7 countries. The system works. The numbers prove it.</div>
+            <div class="snum"><span class="g">$10M+</span> In Combined Student Revenue</div>
+            <div class="sbody">1,500+ Muslims taught. 94% success rate. From a waiter in France making &euro;11/hour to building a team of 50+ across 7 countries. Osamah made hijrah to Morocco. Farhad retired his mother. Tanny hit 7 figures. The system works. The numbers prove it.</div>
         </div>
 
         <div class="cw"><a href="#apply" class="cta">Save My Spot</a></div>
@@ -308,7 +335,7 @@
                         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
                     </div>
                     <h4>What</h4>
-                    <p>Free live training on the halal skill paying Muslims $3K-$10K/month online</p>
+                    <p>Free 90-minute live training on the halal skill paying ordinary Muslims $3K-$10K/month online. No pitch for the first 60 minutes. Pure value.</p>
                 </div>
                 <div class="detail-card sr">
                     <div class="d-icon">
@@ -322,7 +349,7 @@
                         <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
                     <h4>Where</h4>
-                    <p>Live on Zoom<br>90 minutes</p>
+                    <p>Live on Zoom<br>90 minutes<br>Replay available for 48 hours</p>
                 </div>
             </div>
             <div class="cw"><a href="#apply" class="cta">Save My Free Spot</a></div>
@@ -346,16 +373,16 @@
                     <div class="pc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                     <h3>The Halal Business Model</h3>
                     <div class="sub-name">Brands Pay $2K-$10K/Month For This</div>
-                    <p>There's a massive gap in the Muslim creator economy. Brands need Muslims to promote to Muslim audiences. 1.8 billion Muslims worldwide. You're the bridge.</p>
+                    <p>There are 1.8 billion Muslims worldwide and a massive gap in the creator economy. Brands need people who understand the culture, the values, the language to promote to Muslim audiences. You become the bridge between brands and influencers. You structure the deals. You take up to 30% commission. All done via email. No phone calls. No inventory. No capital. 2-3 hours of focused work per day.</p>
                 </div>
             </div>
             <div class="card center sr" style="overflow:hidden;padding:0;">
                 <div class="mc-bar"></div>
                 <div style="padding:28px 24px;">
                     <div class="pc-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
-                    <h3>How It Works End to End</h3>
-                    <div class="sub-name">No Inventory. No Capital. No Audience.</div>
-                    <p>Who pays you. What you deliver. Why you don't need inventory, capital, an audience, or to show your face. Lowest barrier, highest ceiling.</p>
+                    <h3>The Personality-Skill Match</h3>
+                    <div class="sub-name">Stop Copying What Doesn't Fit You</div>
+                    <p>Most people fail online because they're forcing a model that doesn't match who they are. We'll break down which skill fits your personality: extroverts go into sales and closing. Introverts go into copywriting, email marketing, ads. Tech-minded people build automations and analytics. All four of these skills feed directly into influencer marketing. You pick the one that fits YOU.</p>
                 </div>
             </div>
             <div class="card center sr" style="overflow:hidden;padding:0;">
@@ -363,14 +390,63 @@
                 <div style="padding:28px 24px;">
                     <div class="pc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                     <h3>The Income Math</h3>
-                    <div class="sub-name">94% Who Follow the System Get Results</div>
-                    <p>How many clients it takes to hit $5K, $10K, and $30K/month. What you charge each one. And why people who follow this system get results.</p>
+                    <div class="sub-name">$5K, $10K, $30K - Here's How Many Clients</div>
+                    <p>One brand deal pays $2,000-$5,000. That's one client. Two clients a month and you're at $4K-$10K. The math is simple. And it's not theory. 94 out of 100 people who actually follow the IMA system get results. We'll break down the exact numbers, what you charge, and why the people who take action are making money within 60-90 days.</p>
                 </div>
             </div>
         </div>
 
-        <p style="text-align:center;font-size:15px;color:var(--t);font-weight:600;margin:28px 0 0;">You'll walk away knowing the exact steps to land your first client in <span class="g">30-60 days</span>.</p>
+        <p style="text-align:center;font-size:15px;color:var(--t);font-weight:600;margin:28px 0 0;">You'll walk away knowing exactly which skill matches your personality and the steps to land your first paying client in <span class="g">30-60 days</span>.</p>
         <div class="cw"><a href="#apply" class="cta">Save My Free Spot</a></div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════
+     WHO THIS IS FOR
+     ═══════════════════════════════ -->
+<section class="sec sr" style="padding-top:0;">
+    <div class="w">
+        <div class="gd" style="margin-bottom:50px;"></div>
+        <h2 class="sh">Is This Training Right <span class="gi">For You?</span></h2>
+        <p class="ss">This training was built for a specific type of person. If any of the below sounds like you, this seat is yours.</p>
+
+        <div class="g2">
+            <div class="who-card sr">
+                <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <p>You're stuck in a 9-5 asking permission to pray, rushing salah at work, missing Jummah because your boss won't let you leave</p>
+            </div>
+            <div class="who-card sr">
+                <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <p>You've tried ecom, FBA, or trading and it didn't work. You've been burned by courses that turned out to be haram halfway through</p>
+            </div>
+            <div class="who-card sr">
+                <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <p>You want to make hijrah but you need a remote income source first. You know where you want to go. You just can't afford to leave yet</p>
+            </div>
+            <div class="who-card sr">
+                <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <p>Your parents are getting older and still working. You want to retire them, take them for Hajj, and stop watching them sacrifice their health for money</p>
+            </div>
+            <div class="who-card sr">
+                <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <p>You want halal income with zero compromise on your deen. No riba. No haram products. No grey areas</p>
+            </div>
+            <div class="who-card sr">
+                <div class="who-check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <p>You're a beginner with no marketing experience and that's fine. Most of our students started exactly where you are right now</p>
+            </div>
+        </div>
+
+        <!-- Not For You -->
+        <div class="not-for-box sr">
+            <h4>This is NOT for you if...</h4>
+            <ul>
+                <li>You're looking for a get-rich-quick scheme with zero effort</li>
+                <li>You're not willing to put in 2-3 hours a day consistently</li>
+                <li>You expect results without sending a single email</li>
+                <li>You're already making $10K+/month online consistently</li>
+            </ul>
+        </div>
     </div>
 </section>
 
@@ -384,45 +460,47 @@
 
         <!-- Block 1 -->
         <div class="s-row tl sr">
-            <div class="s-img"><img src="/images/abu-story-1.jpg" alt="Abu Lahya" loading="lazy"></div>
+            <div class="s-img"><img src="/images/abu-story-1.jpg" alt="Abu Lahya in France" loading="lazy"></div>
             <div class="s-text">
                 <h2>It Started at &euro;11/Hour in France</h2>
-                <p>Computer science student. Waiter on the side making &euro;11/hour. I wanted to start a business but every course I found, halfway through, something haram would come up.</p>
-                <p>I spent 6 months longer than everyone else avoiding it. But subhanAllah, from sticking to halal, I ended up more successful than all of them. My business sustained itself better in hard times because it had baraka.</p>
+                <p>Computer science student. Waiter on the side making &euro;11/hour. I wanted to start a business but every course I found, halfway through, something haram would come up. Dropshipping had haram products. Trading courses pushed riba. Affiliate marketing was full of scams.</p>
+                <p>I spent 6 months longer than everyone else because I refused to compromise on halal. But subhanAllah, from sticking to it, I ended up more successful than all of them. My business sustained itself better in hard times because it had baraka.</p>
             </div>
         </div>
 
         <!-- Block 2 -->
         <div class="s-row tr sr">
-            <div class="s-img"><img src="/images/abu-story-2.jpg" alt="Abu Lahya Ramadan" loading="lazy"></div>
+            <div class="s-img"><img src="/images/abu-story-2.jpg" alt="Abu Lahya team" loading="lazy"></div>
             <div class="s-text">
-                <h2>1,500+ Muslims. 50+ Staff. 7 Countries.</h2>
-                <p>Went from one laptop to 50+ staff in 7 countries. 1,500+ Muslims taught. 94% success rate. This is what happens when you build something halal from the ground up and actually help people get results.</p>
+                <h2>1,500+ Muslims. $10M+ Combined Revenue. 50+ Staff.</h2>
+                <p>Went from one laptop to 50+ staff across 7 countries. Built the largest halal online business community. 1,500+ Muslims taught with a 94% success rate.</p>
+                <p>This isn't a YouTube guru selling a course. This is a system with 12 mentors running 15-20 live coaching calls every single week. Roast My Email sessions where coaches tear apart your outreach and fix it live. A week-by-week roadmap that tells you exactly what to do from day one.</p>
                 <div class="story-stats">
                     <div><div class="ss-num">1,500+</div><div class="ss-label">Students</div></div>
                     <div><div class="ss-num">94%</div><div class="ss-label">Success Rate</div></div>
                     <div><div class="ss-num">50+</div><div class="ss-label">Staff</div></div>
+                    <div><div class="ss-num">12</div><div class="ss-label">Mentors</div></div>
                 </div>
             </div>
         </div>
 
         <!-- Block 3 -->
         <div class="s-row tl sr">
-            <div class="s-img"><img src="/images/abu-story-3.jpg" alt="Abu Lahya Saudi" loading="lazy"></div>
+            <div class="s-img"><img src="/images/abu-story-3.jpg" alt="Abu Lahya with scholars" loading="lazy"></div>
             <div class="s-text">
                 <h2>Trusted by the Biggest Names in the Ummah</h2>
-                <p>Partnered with Sheikh Uthman, Imran Ibn Mansour, Abu Bakr The Musafir. Gave away 10,000 business books to Muslims.</p>
-                <p>Built the largest halal online business community. When scholars and creators trust you, it's because the work speaks for itself.</p>
+                <p>Partnered with Sheikh Uthman, Imran Ibn Mansour, Abu Bakr The Musafir, Sheikh Odouro. Gave away 10,000 business books to Muslims worldwide.</p>
+                <p>When you ask "is this a scam?" ... 1,500+ students, scholar endorsements, and 100+ five-star Trustpilot reviews answer that question. As one student said: "I never really seen an accredited imam or a person in the community that's advertising an online business like this."</p>
             </div>
         </div>
 
         <!-- Block 4 -->
         <div class="s-row tr sr">
-            <div class="s-img"><img src="/images/abu-story-4.jpg" alt="Abu Lahya Cape Town" loading="lazy"></div>
+            <div class="s-img"><img src="/images/abu-story-4.jpg" alt="IMA students" loading="lazy"></div>
             <div class="s-text">
                 <h2>Students Living the Life You Want</h2>
-                <p>Osamah made hijrah to Morocco. Farhad retired his mother. Tanny hit 7 figures. These aren't cherry-picked outliers.</p>
-                <p>94 out of 100 people who follow the system get results. That's the power of having the right vehicle, the right support, and baraka in your business.</p>
+                <p>Osamah packed his bags and moved to Morocco. Not because he won the lottery. Because he built a business that works from anywhere in the world. He prays every salah on time. His kids go to Islamic school.</p>
+                <p>Farhad retired his mother. Tanny hit 7 figures. And these aren't cherry-picked outliers. 94 out of 100 people who follow the system get results. That's the power of having the right vehicle, the right mentors, and baraka in your business.</p>
             </div>
         </div>
 
@@ -457,7 +535,7 @@
                 <li>This is a LIVE event. Show up live to get the most out of it.</li>
                 <li>Check your email after registering for your Zoom link and calendar invite.</li>
                 <li>Have a notebook ready. You'll want to take notes.</li>
-                <li>Come with questions. There will be a live Q&A with Abu Lahya at the end.</li>
+                <li>Come with questions. There will be a live Q&amp;A with Abu Lahya at the end.</li>
             </ul>
         </div>
     </div>
@@ -474,10 +552,29 @@
 <script>
 (function(){
     var t=new Date('2026-04-26T23:00:00Z').getTime();
-    function u(){var n=Date.now(),d=t-n;if(d<0)d=0;var dd=Math.floor(d/864e5),hh=Math.floor(d%864e5/36e5),mm=Math.floor(d%36e5/6e4),ss=Math.floor(d%6e4/1e3);document.getElementById('cd-days').textContent=dd<10?'0'+dd:dd;document.getElementById('cd-hours').textContent=hh<10?'0'+hh:hh;document.getElementById('cd-mins').textContent=mm<10?'0'+mm:mm;document.getElementById('cd-secs').textContent=ss<10?'0'+ss:ss;}
+    function u(){
+        var n=Date.now(),d=t-n;
+        if(d<0)d=0;
+        var dd=Math.floor(d/864e5),
+            hh=Math.floor(d%864e5/36e5),
+            mm=Math.floor(d%36e5/6e4),
+            ss=Math.floor(d%6e4/1e3);
+        document.getElementById('cd-days').textContent=dd<10?'0'+dd:dd;
+        document.getElementById('cd-hours').textContent=hh<10?'0'+hh:hh;
+        document.getElementById('cd-mins').textContent=mm<10?'0'+mm:mm;
+        document.getElementById('cd-secs').textContent=ss<10?'0'+ss:ss;
+    }
     u();setInterval(u,1000);
 })();
-(function(){var els=document.querySelectorAll('.sr');var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('v');o.unobserve(en.target);}});},{threshold:0.1});els.forEach(function(el){o.observe(el);});})();
+(function(){
+    var els=document.querySelectorAll('.sr');
+    var o=new IntersectionObserver(function(e){
+        e.forEach(function(en){
+            if(en.isIntersecting){en.target.classList.add('v');o.unobserve(en.target);}
+        });
+    },{threshold:0.1});
+    els.forEach(function(el){o.observe(el);});
+})();
 </script>
 
 </body>
