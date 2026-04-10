@@ -22,8 +22,8 @@
             --bg2: #f5f7fa;
             --text: #111111;
             --text2: #555555;
-            --text3: #888888;
-            --text4: #aaaaaa;
+            --text3: #707070;
+            --text4: #999999;
             --border: #e0e0e0;
             --red: #EF4444;
             --gold:#2861E4;
@@ -53,11 +53,11 @@
             padding:18px 100px; border-radius:14px; text-decoration:none;
             border:2px solid #8B6914;
             cursor:pointer; font-family:inherit;
-            box-shadow:0 4px 30px rgba(0,0,0,0.3), 0 0 12px rgba(212,175,55,0.15);
+            box-shadow:0 4px 20px rgba(0,0,0,0.15), 0 0 12px rgba(212,175,55,0.1);
             transition:transform 0.4s ease, box-shadow 0.4s ease;
             position:relative; overflow:hidden;
         }
-        .cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.4), 0 0 20px rgba(212,175,55,0.25); }
+        .cta:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(0,0,0,0.2), 0 0 20px rgba(212,175,55,0.15); }
         .cta::after { content:''; position:absolute; top:0;left:0;right:0;bottom:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.25),transparent); animation:shimmer 3s infinite; border-radius:14px; pointer-events:none; }
         @keyframes shimmer { 0%{transform:translateX(-100%)} 100%{transform:translateX(100%)} }
 
@@ -147,13 +147,14 @@
         .fq[open] summary::after { transform:rotate(45deg); }
         .fq-a { padding:0 0 16px; font-size:13px; color:var(--text2); line-height:1.7; }
 
-        /* ── Modal ── */
-        .modal-overlay { display:none; position:fixed; top:0;left:0;right:0;bottom:0; background:rgba(0,0,0,0.85); z-index:10000; align-items:center; justify-content:center; }
+        /* ── Modal (dark contrast against light page) ── */
+        .modal-overlay { display:none; position:fixed; top:0;left:0;right:0;bottom:0; background:rgba(0,0,0,0.75); z-index:10000; align-items:center; justify-content:center; backdrop-filter:blur(4px); -webkit-backdrop-filter:blur(4px); }
         .modal-overlay.open { display:flex; }
-        .modal-box { background:var(--bg2); border:1px solid rgba(var(--accent-rgb),0.25); border-radius:16px; padding:28px 24px; max-width:420px; width:92%; position:relative; max-height:90vh; overflow-y:auto; box-shadow:0 0 40px rgba(var(--accent-rgb),0.1); }
-        .modal-close { position:absolute; top:12px;right:16px; background:none; border:none; color:var(--text3); font-size:28px; cursor:pointer; line-height:1; }
-        .modal-title { font-size:20px; font-weight:700; margin-bottom:4px; text-align:center; }
-        .modal-sub { font-size:13px; color:var(--text3); text-align:center; margin-bottom:16px; }
+        .modal-box { background:#0A193B; border:1px solid rgba(40,97,228,0.4); border-radius:16px; padding:28px 24px; max-width:420px; width:92%; position:relative; max-height:90vh; overflow-y:auto; box-shadow:0 0 60px rgba(40,97,228,0.2), 0 20px 40px rgba(0,0,0,0.4); }
+        .modal-close { position:absolute; top:12px;right:16px; background:none; border:none; color:rgba(255,255,255,0.5); font-size:28px; cursor:pointer; line-height:1; }
+        .modal-close:hover { color:#fff; }
+        .modal-title { font-size:20px; font-weight:700; margin-bottom:4px; text-align:center; color:#fff; }
+        .modal-sub { font-size:13px; color:rgba(255,255,255,0.6); text-align:center; margin-bottom:16px; }
 
         /* ── Footer ── */
         footer { text-align:center; padding:40px 24px 30px; border-top:1px solid var(--border); margin-top:40px; }
@@ -335,14 +336,38 @@
 </section>
 
 <!-- ============================
-     S4: BEFORE/AFTER
+     S3: WHO IS THIS FOR
      ============================ -->
-<section class="ba-section" style="padding:60px 24px;">
+<section style="padding:60px 24px;">
+    <div class="container">
+        <div class="wa-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
+            <div class="gold-line"></div>
+            <div class="gold-dots"></div>
+            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#111;">Is This For You?</h2>
+            <div class="wa-grid sr-stagger">
+                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>You're stuck in a 9-5 and your income is capped no matter how hard you work</p></div>
+                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>You've tried ecom, FBA, or trading and none of it worked</p></div>
+                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>You want to make hijrah but you need a remote income first</p></div>
+                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>Your parents are getting older and you want to retire them before it's too late</p></div>
+                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>You want halal income with zero compromise on your deen</p></div>
+                <div class="wa-item"><div class="wa-icon">&#10003;</div><p>You're a beginner with no experience and that's completely fine</p></div>
+            </div>
+            <div style="text-align:center;margin-top:20px;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+        </div>
+    </div>
+</section>
+
+<div class="accent-bar sr"></div>
+
+<!-- ============================
+     S4: BEFORE/AFTER (Blue background)
+     ============================ -->
+<section class="ba-section blue-section" style="background:#2861E4;">
     <div class="container">
         <div class="ba-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
             <div class="gold-line"></div>
             <div class="gold-dots"></div>
-            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#111;">What Changes After This Training</h2>
+            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#fff;">What Changes After This Training</h2>
             <div class="ba-grid sr-stagger">
                 <div class="ba-card before">
                     <div class="ba-card-head">Before The Halal Money Masterclass</div>
@@ -369,6 +394,8 @@
         </div>
     </div>
 </section>
+
+<div class="accent-bar sr"></div>
 
 <!-- ============================
      S5: EVERYTHING YOU'LL LEARN
@@ -414,6 +441,35 @@
     </div>
 </section>
 
+<div class="accent-bar sr"></div>
+
+<!-- ============================
+     S9: WHAT YOU'LL WALK AWAY WITH
+     ============================ -->
+<section style="padding:60px 24px;">
+    <div class="container">
+        <div class="wa-box sr" style="position:relative;overflow:hidden;padding-top:50px;">
+            <div class="gold-line"></div>
+            <div class="gold-dots"></div>
+            <h2 style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#111;">What You'll Walk Away With</h2>
+            <div style="border:1px solid #e0e0e0;border-radius:12px;background:rgba(var(--gold-rgb),0.03);padding:24px 28px;max-width:720px;margin:0 auto 20px;text-align:center;">
+            <ul class="access-list">
+                <li>The exact halal business model paying Muslims $3K-$10K/month</li>
+                <li>Which of the 4 skills matches YOUR personality</li>
+                <li>The income math: how many clients to hit $5K, $10K, $30K/month</li>
+                <li>A step-by-step action plan for your first client in 30-60 days</li>
+                <li>Why 94% of people who follow this system get results</li>
+                <li>Live Q&amp;A with Abu Lahya to answer your specific questions</li>
+                <li>Access to the replay for 48 hours if you can't make it live</li>
+            </ul>
+            </div>
+            <div style="text-align:center;"><a href="#apply" class="cta" onclick="openModal(event)">Save Your Spot</a></div>
+        </div>
+    </div>
+</section>
+
+<div class="accent-bar sr"></div>
+
 <!-- ============================
      S10: CLAIM YOUR SPOT (Blue background)
      ============================ -->
@@ -441,6 +497,24 @@
     </div>
 </section>
 
+<div class="accent-bar sr"></div>
+
+<!-- ============================
+     S11: FAQ
+     ============================ -->
+<section style="padding:60px 24px;">
+    <div class="container">
+        <h2 class="sr" style="text-align:center;font-size:clamp(22px,4vw,30px);font-weight:600;margin-bottom:28px;color:#111;">Common Questions</h2>
+        <div class="faq-list sr-stagger">
+            <details class="fq"><summary>Is this really free?</summary><div class="fq-a">Yes. 100% free. No credit card needed. Just show up.</div></details>
+            <details class="fq"><summary>Do I need any experience?</summary><div class="fq-a">No. Most of our students started with zero business or marketing experience.</div></details>
+            <details class="fq"><summary>Will there be a replay?</summary><div class="fq-a">Yes. If you register, you'll get access to the replay for 48 hours.</div></details>
+            <details class="fq"><summary>Is this halal?</summary><div class="fq-a">Everything Abu teaches is halal by design. He spent 6 months longer than everyone else avoiding haram when he started. He won't teach anything he wouldn't do himself.</div></details>
+            <details class="fq"><summary>What if I'm working a 9-5 during the webinar?</summary><div class="fq-a">The webinar is at 6:00 PM EST on a Saturday. And there's a 48-hour replay if you register.</div></details>
+        </div>
+    </div>
+</section>
+
 <!-- ============================
      APPLICATION MODAL
      ============================ -->
@@ -449,8 +523,7 @@
         <button class="modal-close" onclick="closeModal()">&times;</button>
         <div class="modal-title">Save Your Spot</div>
         <div class="modal-sub">You'll get the details sent to your email.</div>
-        <!-- Replace with client's Tally form embed -->
-        <iframe data-tally-src="{{TALLY_FORM_URL}}" loading="lazy" width="100%" height="307" frameborder="0" marginheight="0" marginwidth="0" title="Application" style="border-radius:8px;display:block;"></iframe>
+        <iframe data-tally-src="https://tally.so/embed/dWl4DV?alignLeft=1&hideTitle=1&dynamicHeight=1" loading="lazy" width="100%" height="361" frameborder="0" marginheight="0" marginwidth="0" title="Lead Capture (Event Funnel)" style="border-radius:8px;display:block;"></iframe>
     </div>
 </div>
 
@@ -459,7 +532,7 @@
      ============================ -->
 <footer>
     <p><a href="/privacy-policy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms-of-service">Terms of Service</a></p>
-    <p style="font-size:9px;color:#aaa;max-width:500px;margin:12px auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of META, Inc.</p>
+    <p style="font-size:9px;color:#999;max-width:500px;margin:12px auto;line-height:1.6;">This site is not a part of the Facebook website or Facebook Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of META, Inc.</p>
     <p>&copy; 2026 IMA Accelerator. All Rights Reserved.</p>
     <p>Contact: <a href="mailto:support@imaaccelerator.com">support@imaaccelerator.com</a></p>
 </footer>
