@@ -33,9 +33,7 @@
         html { scroll-behavior:smooth; }
         html, body { -ms-overflow-style:none; scrollbar-width:none; }
         html::-webkit-scrollbar, body::-webkit-scrollbar { display:none; }
-        body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
-        .page-gradient { position:fixed; top:0; left:0; right:0; bottom:0; pointer-events:none; z-index:0; background:linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.08) 70%, rgba(255,255,255,0.15) 85%, rgba(255,255,255,0.25) 95%, rgba(255,255,255,0.4) 100%); }
-        body > *:not(.page-gradient) { position:relative; z-index:1; }
+        body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; transition:background-color 0.1s linear; }
         .container { max-width:1000px; margin:0 auto; padding:0 24px; }
         img { max-width:100%; height:auto; }
 
@@ -216,8 +214,6 @@
     </style>
 </head>
 <body>
-<div class="page-gradient"></div>
-
 <!-- urgency bar removed -->
 
 <!-- ============================
@@ -361,7 +357,7 @@
 <!-- ============================
      S6: BONUS (with corner accents + ribbon bg)
      ============================ -->
-<section style="padding:60px 24px;">
+<section id="bonus-section" style="padding:60px 24px;">
     <div class="container">
         <div class="bonus-card sr" style="padding:0;overflow:hidden;max-width:600px;">
             <div class="ribbon-bg"></div>
@@ -565,6 +561,32 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal()
 <!-- Tally Form Loader -->
 <script>
 var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach(function(e){e.src=e.dataset.tallySrc})};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w;s.onload=v;s.onerror=v;d.body.appendChild(s);}
+</script>
+
+<!-- Scroll-based background transition: black → white starting at bonus section -->
+<script>
+(function(){
+    var bonus = document.getElementById('bonus-section');
+    if(!bonus) return;
+    var body = document.body;
+    function onScroll(){
+        var bonusTop = bonus.getBoundingClientRect().top + window.scrollY;
+        var transitionStart = bonusTop - window.innerHeight;
+        var transitionEnd = document.body.scrollHeight - window.innerHeight;
+        var scrollY = window.scrollY;
+        if(scrollY <= transitionStart){
+            body.style.backgroundColor = '#0a0a0a';
+        } else if(scrollY >= transitionEnd){
+            body.style.backgroundColor = '#ffffff';
+        } else {
+            var progress = (scrollY - transitionStart) / (transitionEnd - transitionStart);
+            var v = Math.round(progress * 255);
+            body.style.backgroundColor = 'rgb('+v+','+v+','+v+')';
+        }
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+})();
 </script>
 
 <!-- TRACKING: Replace with client's tracking script -->
