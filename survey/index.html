@@ -21,7 +21,7 @@
         body { font-family:'Inter',sans-serif; background:#ffffff; color:#111; line-height:1.7; min-height:100vh; }
 
         /* Top bar */
-        .top-bar { background:linear-gradient(90deg, #D4AF37, #E8C84A, #D4AF37); padding:10px 24px; text-align:center; font-size:13px; font-weight:700; color:#000; letter-spacing:0.5px; }
+        .top-bar { background:linear-gradient(90deg, #D4AF37, #E8C84A, #D4AF37); padding:10px 24px; text-align:center; font-size:13px; font-weight:700; color:#000; letter-spacing:0.5px; position:sticky; top:0; z-index:9999; }
 
         /* Progress bar */
         .progress-wrap { padding:16px 24px 0; max-width:600px; margin:0 auto; }
@@ -84,7 +84,7 @@
 <!-- Main content -->
 <div class="main">
     <h1>Your Registration Is Almost Complete</h1>
-    <p class="sub">Fill out the quick survey below to finish your registration and get access to the WhatsApp group.</p>
+    <p class="sub">Fill out the quick survey below to finish your registration and get access to the WhatsApp group, where you'll receive exclusive workbooks to follow along during the masterclass.</p>
 
     <!-- CTA button that scrolls to form -->
     <a href="#survey-form" class="survey-cta" style="display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#E8C84A 0%,#D4AF37 50%,#C49B2F 100%);color:#fff;font-weight:700;font-size:17px;padding:18px 80px;border-radius:14px;text-decoration:none;border:2px solid #8B6914;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.15);transition:transform 0.4s,box-shadow 0.4s;margin-bottom:40px;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform=''">Fill Out The Survey</a>
@@ -95,8 +95,8 @@
 
     <!-- Survey form -->
     <div id="survey-form" class="survey-section">
-        <h2>Complete The Survey To Join The WhatsApp Group</h2>
-        <p class="survey-sub">It takes about 30 seconds. This helps me speak directly to your situation during the masterclass.</p>
+        <h2>Complete The Survey To Get Your Workbooks</h2>
+        <p class="survey-sub">It takes about 30 seconds. Once you complete it, you'll get access to the WhatsApp group where we'll send your exclusive masterclass workbooks.</p>
 
         <div class="form-box">
             <iframe data-tally-src="https://tally.so/embed/2EJrGA?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="244" frameborder="0" marginheight="0" marginwidth="0" title="Lead Scoring (Event Funnel)" style="border-radius:8px;display:block;"></iframe>
@@ -143,5 +143,12 @@ window.addEventListener('message', function(e) {
 })();
 </script>
 
+<script>
+var head = document.head;
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = "https://mm.imaccelerator.com/v1/lst/universal-script?ph=0fb4e1de0ecdc2e41c47c93b3ea03d88cba27b1980231d6372ddb0d04660d026&tag=!clicked&ref_url=" + encodeURI(document.URL);
+head.appendChild(script);
+</script>
 </body>
 </html>
