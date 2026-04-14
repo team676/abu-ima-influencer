@@ -43,7 +43,6 @@
         .step { background:#f5f7fa; border:1px solid #e0e0e0; border-radius:14px; padding:24px 22px; text-align:left; display:flex; align-items:flex-start; gap:16px; animation:fadeUp 0.6s ease both; }
         .step:nth-child(1) { animation-delay:0.1s; }
         .step:nth-child(2) { animation-delay:0.25s; }
-        .step:nth-child(3) { animation-delay:0.4s; }
         @keyframes fadeUp { 0%{opacity:0;transform:translateY(16px)} 100%{opacity:1;transform:translateY(0)} }
 
         .step-num { min-width:36px; height:36px; background:rgba(40,97,228,0.1); border:1px solid rgba(40,97,228,0.25); border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:700; color:#2861E4; margin-top:2px; }
@@ -94,7 +93,7 @@
 <body>
 
 <!-- Gold top bar -->
-<div class="top-bar">COMPLETE THESE STEPS TO FINISH YOUR REGISTRATION</div>
+<div class="top-bar">2 MORE STEPS TO FINISH YOUR REGISTRATION</div>
 
 <!-- Progress bar -->
 <div class="progress-wrap">
@@ -104,35 +103,27 @@
 
 <!-- Main content -->
 <div class="main">
-    <div class="check-circle">
-        <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    <div style="display:inline-flex;align-items:center;gap:10px;background:rgba(var(--accent-rgb),0.08);border:1px solid rgba(var(--accent-rgb),0.2);border-radius:50px;padding:10px 24px;margin-bottom:24px;animation:popIn 0.5s ease;">
+        <span style="font-size:14px;font-weight:700;color:var(--accent);letter-spacing:0.5px;">2 MORE STEPS LEFT</span>
     </div>
 
     <h1>You're Nearly There, Alhamdulillah</h1>
-    <p class="sub">Complete these steps to finish your registration and make sure you don't miss the masterclass.</p>
+    <p class="sub">Complete these two steps to make sure you don't miss the masterclass.</p>
 
-    <!-- 3 Steps -->
+    <!-- 2 Steps -->
     <div class="steps">
         <div class="step">
             <div class="step-num">1</div>
             <div>
-                <h3>Check Your Email</h3>
-                <p>Your confirmation and Zoom link have been sent to your inbox. If you don't see it in the next few minutes, check your spam or promotions folder and mark it as "not spam." Search for "Halal Money Masterclass" and move it to your primary folder.</p>
+                <h3>Join The WhatsApp Group</h3>
+                <p>This is where the Zoom link, reminders, your exclusive workbooks, and all updates will be shared before we go live. You need to be in this group.</p>
             </div>
         </div>
         <div class="step">
             <div class="step-num">2</div>
             <div>
-                <h3>Add It To Your Calendar</h3>
-                <p>Zoom has a limited number of spots. Add the event to your calendar now so you don't miss it. The Zoom link is inside the calendar event.</p>
-                <a href="https://calendar.google.com/calendar/u/0/r/eventedit?dates=20260426T140000/20260426T153000&ctz=Pacific/Easter&text=The+Halal+Money+Masterclass+by+Abu+Lahya&details=%3Cp%3EDuring+this+live+masterclass,+Abu+Lahya+will+walk+you+through+exactly+how+influencer+marketing+is+paying+ordinary+Muslims+$3K-$10K/month+online.%3Cbr%3E%3Cbr%3EYou+will+learn+how+the+Muslim+creator+economy+works,+what+brands+actually+pay+you+for+and+why+it+needs+no+inventory,+no+capital,+and+no+audience,+and+how+to+go+from+zero+experience+to+your+first+paid+client+in+30-60+days.%3Cbr%3E%3Cbr%3EThe+Halal+Money+Masterclass+will+take+place+on+%3Cstrong%3ESaturday,+April+26+at+2:00+PM+EST+/+7:00+PM+BST%3C/strong%3E%3Cbr%3E%3Cbr%3E%3Cstrong%3EWhat+you%27ll+learn:%3C/strong%3E%3Cbr%3E%E2%80%A2+The+%3Cstrong%3Emassive+gap+in+the+Muslim+market%3C/strong%3E+that+brands+are+paying+thousands+to+fill,+and+why+being+Muslim+is+your+unfair+advantage%3Cbr%3E%E2%80%A2+%3Cstrong%3EHow+influencer+marketing+works%3C/strong%3E+end+to+end:+who+pays+you,+what+you+deliver,+and+why+it+needs+%3Cstrong%3Eno+inventory,+no+capital,+no+audience,+and+no+content%3C/strong%3E%3Cbr%3E%E2%80%A2+The+simple+income+math:...%3Cbr%3EView+full+details+at:+%3Ca+href%3D%22https://addcal.io/e/6258vh327wnn%22%3Ehttps://addcal.io/e/6258vh327wnn%3C/a%3E&location=https://us06web.zoom.us/j/83800664823&pli=1&uid=evt_6258vh327wnn&sf=true&output=xml&crm=BUSY&trp=true" target="_blank" style="display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 20px;background:rgba(var(--accent-rgb),0.1);border:1px solid rgba(var(--accent-rgb),0.25);border-radius:8px;color:var(--accent);font-size:13px;font-weight:700;text-decoration:none;transition:background 0.2s;">📅 Add to Google Calendar</a>
-            </div>
-        </div>
-        <div class="step">
-            <div class="step-num">3</div>
-            <div>
-                <h3>Join The WhatsApp Group</h3>
-                <p>This is where the Zoom link, reminders, and all updates will be shared before we go live. You need to be in this group.</p>
+                <h3>Check Your Email</h3>
+                <p>Your confirmation and calendar invite have been sent to your inbox. If you don't see it in the next few minutes, check your spam or promotions folder and mark it as "not spam." Search for "Halal Money Masterclass" and move it to your primary folder.</p>
             </div>
         </div>
     </div>
